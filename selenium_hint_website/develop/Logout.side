@@ -1,0 +1,123 @@
+{
+  "id": "a5941cde-804a-4d40-a41a-e64cb2141584",
+  "version": "2.0",
+  "name": "Logout",
+  "url": "https://hintofyou.playbybeautyhaul.com/en/",
+  "tests": [{
+    "id": "23497e8a-36ea-4f71-8392-fcb8092dd222",
+    "name": "User sign out",
+    "commands": [{
+      "id": "f185c293-fb74-46fe-aed6-f0a577f561b7",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In Existing Account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01998ee8-d07e-4c7d-b90e-867ec3deda3a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74894fba-ac21-4dd9-bca0-ecb54d8d9e86",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Log out",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15598ddf-2cb2-450d-adc2-f489c9bccd15",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[@type='button'])[4]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e6abae9c-2639-4d4e-bd3c-48e35f342379",
+    "name": "Sign In Existing Account",
+    "commands": [{
+      "id": "8c5beba7-65af-4d00-89f2-fd6d1d5cefee",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b877e959-abc3-40ea-aea2-b279aaead965",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1bb49f23-d4bc-42df-8b07-79aeb939f043",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//div[@class='popup-close']",
+      "targets": [],
+      "value": "31000"
+    }, {
+      "id": "9662859e-9c03-4cc0-b8cb-bfaccca1f85f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='popup-close']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d6d20ff9-8241-411e-878b-5451dfe9ef9d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-account']//button[@type='button']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "139b5a33-f9b8-4793-a171-4355edfbc6cf",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [],
+      "value": "ananda.surya@beautyhaul.com"
+    }, {
+      "id": "ed7da21f-7b11-4ba8-acb3-daf637a7f558",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [],
+      "value": "testingBHI123"
+    }, {
+      "id": "7d6b3693-e360-4f18-9531-8e24bf7f02d9",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Login')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0cc116b9-1499-48fc-abf8-b4f0a0243f13",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "6a531c09-020c-4f0c-ab54-ea4d90ebb2cf",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e6d1304d-99fc-4a7f-8a94-3d50fff02765",
+    "name": "Logout",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["23497e8a-36ea-4f71-8392-fcb8092dd222"]
+  }],
+  "urls": ["https://hintofyou.playbybeautyhaul.com/en/"],
+  "plugins": []
+}

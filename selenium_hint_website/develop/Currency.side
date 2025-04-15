@@ -1,0 +1,1032 @@
+{
+  "id": "e9f912f1-ff6e-4625-a509-60d162894e57",
+  "version": "2.0",
+  "name": "Currency",
+  "url": "https://hintofyou.playbybeautyhaul.com/en",
+  "tests": [{
+    "id": "4ab2f46f-28f6-47ba-9994-fdae98c8f1ba",
+    "name": "C02_Order with MYR currency",
+    "commands": [{
+      "id": "0353c56c-6e6f-4c0d-9510-0b871f75430d",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "12a9b7cd-1e82-42be-9c12-b23fa06cf56a",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75423a58-e93a-4c9b-8c55-923c9593c37e",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Add to Bag')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "ac8b0497-1ea0-4bac-8838-a4a7413f0ec4",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(text(),'Add to Bag')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7c941af-4235-4d0c-b710-2db0a906bd0a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Add to Bag')]",
+      "targets": [
+        ["css=.d-none .i", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "30f39345-06b8-4bc0-be40-3abacf48b372",
+      "comment": "",
+      "command": "waitForText",
+      "target": "//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "a151df97-17c5-401c-96d8-6b4bca17f3d8",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6caeaeb7-885b-4a99-8b05-5689e52fa2bb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Checkout')]",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-primary:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://hintofyou.playbybeautyhaul.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[18]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c48180c6-3d9f-49ab-980d-4978e4849394",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "953c2e23-e93c-427d-9d36-be585877651d",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "86ddeb40-8ded-4a32-ad43-1d7cea2727cd",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9bac7f56-9a38-464f-bf58-e98d861b0c09",
+      "comment": "",
+      "command": "click",
+      "target": "css=.underline",
+      "targets": [
+        ["css=.underline", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'IDR')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f934f105-3592-44e9-b0b3-56448ae7a40c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(text(),'Malaysian Ringgit')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf7aec55-17ea-406b-9580-504b5ba79dc6",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Malaysian Ringgit')]",
+      "targets": [
+        ["css=.col-17:nth-child(1) .select-overlay > div", "css:finder"],
+        ["xpath=//div[3]/div/div/a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cddfb56b-2cc3-45ea-8015-8c1a4927af4a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [
+        ["css=.col-6 > .btn", "css:finder"],
+        ["xpath=//div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Next Step')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e861c143-56c4-447f-9779-fb645d50d9f1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7d265141-d0fe-45b6-8354-b4c3885d6fc9",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3da61f05-b532-4719-b564-6c0d36718c50",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "486153c3-b961-4eb8-9b55-7a554a74568e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'J&T')]",
+      "targets": [
+        ["css=.card-body-payment:nth-child(2) .col-auto:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div[2]/div/label/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d603084-8711-483d-a057-8327b419e530",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b39ccd4-e7a0-4d4c-bbc0-174aac5f8395",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [
+        ["css=.col-6 > .btn", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Next Step')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9f8af76-3810-4d08-8aa0-14365f8d5eb9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54cba391-55c4-45c4-9d56-f1235a3d4e3f",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2fc6c538-80d9-41d7-ae55-9af1c5f3fa4d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "4e581eee-fd4a-42b8-87e1-0d4feb82a6fc",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "5f4da3f8-47b1-4fe8-a58a-6525d4fd14bb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Place Order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd13fec5-aa1e-40bd-8ea0-674f58e5a343",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "43c27b4e-fd8b-472d-995d-e386a41c40c9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "Complete Your Payment"
+    }, {
+      "id": "a57594a5-f23d-4162-bf1d-005e142172c4",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.cart-detail.text-lg",
+      "targets": [],
+      "value": "RM"
+    }]
+  }, {
+    "id": "80bc2825-1ceb-467a-8572-74288ec78083",
+    "name": "C01_Order with USD currency",
+    "commands": [{
+      "id": "4a5481ad-b412-488a-a357-895aa6c182b5",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e83566b-d6f3-4f09-934d-8a6b28ea3599",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e06c939-2326-4635-8aeb-25ed6142c862",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Add to Bag')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "1dc600b0-689f-425a-a4d5-912068cf0cff",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(text(),'Add to Bag')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d30b7d5-a52d-41ef-9448-ccde6fe083e3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Add to Bag')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "489ccc63-60a8-434f-be25-de4efb44cd01",
+      "comment": "",
+      "command": "waitForText",
+      "target": "//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "ed07223f-6d21-4365-b0c4-8a459ce9c9ff",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e6ee43b-d434-4c3e-8d71-aaaa9b310c5d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Checkout')]",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-primary:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://hintofyou.playbybeautyhaul.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[18]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cefef380-a298-4cba-9979-390d4ccb585b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9ff54583-dfce-4e94-bd42-3dd592647631",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "59ce18f9-c147-453e-8246-bb054f2d283b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f65de927-1a40-4c33-b9c1-06b306cf82cb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.underline",
+      "targets": [
+        ["css=.col-17:nth-child(1) .select-overlay > div", "css:finder"],
+        ["xpath=//div[3]/div/div/a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e56e6b4b-39a8-4948-9830-9c4a8b564b98",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(text(),'United States Dollar')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b8f61de-1ebd-4902-9ae5-85667daf9bf1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'United States Dollar')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d4173f6d-ecb4-43d5-90d8-adfb15ad5e8a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [
+        ["css=.col-6 > .btn", "css:finder"],
+        ["xpath=//div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Next Step')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b148c649-d22c-41c9-9bbf-690edfecbd4d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "490cb28d-c6f3-418a-afd9-f9992c340b3f",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6bbc80b6-994d-4d76-9ea3-ef594892403e",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "1b0da6cc-b499-4d95-8ac6-25089958f618",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'J&T')]",
+      "targets": [
+        ["css=.card-body-payment:nth-child(2) .col-auto:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div[2]/div/label/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0d05ecb-805d-4d6d-af2d-a77a45f408f0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c318e9bf-80c3-471a-bce2-dd83b1805156",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [
+        ["css=.col-6 > .btn", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Next Step')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a546da5-0c8e-4ff3-95cc-50466d0127f2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3d7b3be-05f0-4618-94a5-f27ecb75e6d9",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ab5d9321-c136-414c-b050-882de63f5d80",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "e31aafb3-dfed-4a3c-8dab-67de07dff010",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "75aa79a2-f53c-44be-a519-e5c40bd6203c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Place Order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "668a1f9c-4780-44ed-8445-18f7413ebc87",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "fca70187-c7fb-4891-8c12-503268b87221",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "Complete Your Payment"
+    }, {
+      "id": "538a203e-d11b-44ec-b157-056222bd4b74",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.cart-detail.text-lg",
+      "targets": [],
+      "value": "$"
+    }]
+  }, {
+    "id": "019278eb-106f-4d6b-82d9-8a135c7d2637",
+    "name": "Sign In account",
+    "commands": [{
+      "id": "d9f958e8-dedb-453e-9749-6668330c2e14",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fddb1833-a460-4677-931b-8256bb5823ee",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad21e22e-bdf2-49b5-b03c-e6252450e939",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7351971b-030f-4948-a8eb-a6c7ebdf8a91",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-account']//button[@type='button']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3b57108-381e-4d24-b987-daded940e203",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [],
+      "value": "ananda.surya@beautyhaul.com"
+    }, {
+      "id": "f25ceca8-3d05-428c-967b-e7d7bd3c8cc1",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [],
+      "value": "testingBHI123"
+    }, {
+      "id": "d629b3c7-907d-456b-9eaf-b108d4c01d48",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Login'])",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "071e532b-7c5f-411d-955d-679733d39e10",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "6c67a902-8cea-4cc4-94ba-d8506e6d8f2e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2045ad52-fc49-449c-ab87-a8e498272bad",
+    "name": "C03_Order with SGD currency",
+    "commands": [{
+      "id": "c55146a8-e7a6-4739-b500-74e05669b004",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3a3b7b7-98ea-4fc7-a214-1977d93d69e2",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "02bc893a-9113-4071-844d-4ac77df78456",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Add to Bag')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "6ab155a1-71e1-4307-af41-d7830ae87d2c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(text(),'Add to Bag')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9ab66958-5680-4226-b38c-0dc58aedc495",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Add to Bag')]",
+      "targets": [
+        ["css=.d-none .i", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "56d4ba26-db87-4b77-8021-2b0485f619ba",
+      "comment": "",
+      "command": "waitForText",
+      "target": "//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "c1ab5900-9af4-4964-83e7-5211832a382d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6aa8edfb-d751-48fe-9323-bd4f26fcb33b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Checkout')]",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-primary:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://hintofyou.playbybeautyhaul.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[18]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "36f747e0-5883-4d1b-8090-86e8deb3467c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1306fed6-f253-42eb-b54c-01e75646dcb3",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb05e3c6-a464-4e1c-a000-7821d1193f1a",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "5728fd68-2ad1-4e86-962e-eba9e1f5af57",
+      "comment": "",
+      "command": "click",
+      "target": "css=.underline",
+      "targets": [
+        ["css=.underline", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'IDR')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "16ee947d-1f97-47fd-a250-73b0bb6b8fa6",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(text(),'Singapore Dollar')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1fd0b033-8839-4904-9295-63b9c73c5946",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Singapore Dollar')]",
+      "targets": [
+        ["css=.col-17:nth-child(1) .select-overlay > div", "css:finder"],
+        ["xpath=//div[3]/div/div/a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "036f6464-058f-44b2-9b35-158220be1b0e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [
+        ["css=.col-6 > .btn", "css:finder"],
+        ["xpath=//div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Next Step')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "57285cdf-0e47-4ec0-aebb-83c95890fa9b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4152a786-5955-476b-848f-3eaaabc23fd2",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "993eaac9-290d-4ca0-9b27-be091722777d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "00edd988-f7c7-4dd2-9929-90e1d1ad1ccc",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'J&T')]",
+      "targets": [
+        ["css=.card-body-payment:nth-child(2) .col-auto:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div[2]/div/label/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d48774ad-daa9-4998-9bec-16d597145421",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2677bff0-102d-4edb-8781-5ce0c0f2720a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [
+        ["css=.col-6 > .btn", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Next Step')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "318bff4b-0720-4ca7-8eac-8bbf12ad82a9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "636f35c7-4263-41a3-800e-36297cf06549",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4efd6cba-ed1b-4522-9f95-7d74102cbf25",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "93bd720f-2bec-4369-9306-c84040dacfa5",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "24bb4bff-94ef-499a-9b9e-a3e4a997f899",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Place Order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8230dc9-2b43-46d5-b093-6d0d22cecd6c",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "ce3c63c4-690c-4504-a3ba-8a3c402f2336",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "Complete Your Payment"
+    }, {
+      "id": "53434387-440f-4845-9b65-1d57d4493b1e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.cart-detail.text-lg",
+      "targets": [],
+      "value": "S$"
+    }]
+  }, {
+    "id": "7795ba31-3642-4aeb-a974-ed436e49306d",
+    "name": "C04_Order with IDR currency",
+    "commands": [{
+      "id": "65f54f7e-bc67-4fb9-8979-a135a3d9f540",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "626518af-7430-4dfa-91dd-504d61940929",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b72d3fa0-eda0-48ba-af22-00f8972f78e5",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Add to Bag')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "d5a56917-a4c7-49b4-96a7-674c2fa509e5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(text(),'Add to Bag')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ab419ec-c800-4288-9070-d09444a71442",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Add to Bag')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "202c425c-5af8-434d-9eee-a77b8222d032",
+      "comment": "",
+      "command": "waitForText",
+      "target": "//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "da73b50a-dfe1-4e2d-b2e7-2dabbc826821",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23c831a2-30dc-475d-932d-ee14c72c02cc",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Checkout')]",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-primary:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://hintofyou.playbybeautyhaul.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[18]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8456990b-425e-4007-95ca-0c8e16ea349e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0af88924-2171-4343-97b9-bbe028883279",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "477ff738-720b-456c-a4ec-4fd3c31e3f3e",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "39fe15d8-22f4-4e15-bed1-0a7874b82baa",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.underline",
+      "targets": [],
+      "value": "IDR"
+    }, {
+      "id": "47b8adbb-9649-4805-bea5-50ca57039eb2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.underline",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ebc76b10-531d-4317-a15a-5e8b383e2e7e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(text(),'Indonesian Rupiah')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "46e7c362-82b3-4850-9ab0-d5dbb4bfa183",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Indonesian Rupiah')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7a762bf7-cc80-4297-94aa-4cbd8234429b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [
+        ["css=.col-6 > .btn", "css:finder"],
+        ["xpath=//div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Next Step')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a74b34fd-9b36-4338-a49b-908488ae1f8f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7bc88c7a-2aca-4b24-9743-776f8f31866f",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94e59b3a-4c4c-4dc5-afb9-814a4d88016d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "bc51b95e-5111-45c2-bc17-51961dff6c98",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'J&T')]",
+      "targets": [
+        ["css=.card-body-payment:nth-child(2) .col-auto:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div[2]/div/label/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "00cbedfb-1924-472b-99b8-3998e8e9b18b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6cb1370f-c4f5-454e-8161-a1d9d38bf0fb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [
+        ["css=.col-6 > .btn", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Next Step')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff378ff5-8df9-4a74-82ff-b8acbb79deae",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1fbbb1d4-29e2-456e-bf31-872f6c679759",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "066dcbd9-6d13-4dd1-928b-2adca1eaa834",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "4ebb0dca-498d-4b16-86c0-40386f56d6d4",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "12327cb8-534a-4650-a3b1-20854cc88ba2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Place Order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "83e2331c-b4f6-49b9-a210-3cb9743dda35",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "2f081ac1-53b0-4810-9c28-0419cd34ea6a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "Complete Your Payment"
+    }, {
+      "id": "96245306-e54e-40d4-a733-3ce5a51c423b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.cart-detail.text-lg",
+      "targets": [],
+      "value": "Rp"
+    }]
+  }],
+  "suites": [{
+    "id": "567bbe73-6f37-4938-b896-d547225a7d27",
+    "name": "Currency",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["80bc2825-1ceb-467a-8572-74288ec78083", "4ab2f46f-28f6-47ba-9994-fdae98c8f1ba", "2045ad52-fc49-449c-ab87-a8e498272bad"]
+  }],
+  "urls": ["https://hintofyou.playbybeautyhaul.com/collection/sanity"],
+  "plugins": []
+}

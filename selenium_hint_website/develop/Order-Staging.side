@@ -1,0 +1,2373 @@
+{
+  "id": "48904f72-f331-49de-986c-b8d7593616d9",
+  "version": "2.0",
+  "name": "Order-Staging",
+  "url": "https://hintofyou.playbybeautyhaul.com/en",
+  "tests": [{
+    "id": "db2e092f-252a-4125-b83b-fd98c9b096d7",
+    "name": "Sign In Admin Account",
+    "commands": [{
+      "id": "5ea5f5ef-d35c-4a32-bb72-3b3dc42d9893",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "44394c29-9a29-48fb-99ad-198460cfbeb0",
+      "comment": "",
+      "command": "open",
+      "target": "https://hintofyou.playbybeautyhaul.com/admin/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "125e2109-ab2a-4ff0-97a7-aaf49bca361a",
+      "comment": "",
+      "command": "type",
+      "target": "name=account_email",
+      "targets": [],
+      "value": "rizky.febrian@beautyhaul.com"
+    }, {
+      "id": "8bcd644f-99d5-4255-9f01-ddb69f2e9ac5",
+      "comment": "",
+      "command": "type",
+      "target": "name=account_pass",
+      "targets": [],
+      "value": "4SJdHg"
+    }, {
+      "id": "e8b476d8-4f90-4eb9-a85e-4ec98a5fe364",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@name='submit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4aa66bd0-78cf-401d-b9da-aee332258f47",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//h1[text()='PRODUCTS']",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "01a8a039-3422-4d31-b035-9dd5545bf1c7",
+    "name": "Register Account",
+    "commands": [{
+      "id": "c42597bb-967b-4182-922a-efba130968db",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb07960a-5661-482d-93c9-75044203bb72",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18ef99b1-68e4-4760-bb37-2e43ab6e576f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//div[@class='popup-close']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9b6dc7d2-99e2-4594-bbd7-74d0ed5b81b2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='popup-close']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e2e1fe28-6244-4a04-a48c-6e8edf3e3d75",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-account']//button[@type='button']",
+      "targets": [
+        ["css=.nav-menu-account .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//li[2]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7380e7ab-bc3c-43af-8ed6-73beec587892",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Register')]",
+      "targets": [
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=(//button[@type='button'])[14]", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9cf9c78-e9d5-4bbc-b514-a04e93d4a7fa",
+      "comment": "",
+      "command": "type",
+      "target": "name=fname",
+      "targets": [
+        ["name=fname", "name"],
+        ["css=.col-d2:nth-child(1) .form-control", "css:finder"],
+        ["xpath=//input[@name='fname']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div/input", "xpath:position"]
+      ],
+      "value": "Test"
+    }, {
+      "id": "54f128ad-b4a0-4255-92ed-920082460507",
+      "comment": "",
+      "command": "type",
+      "target": "name=lname",
+      "targets": [
+        ["name=lname", "name"],
+        ["css=.col-d2:nth-child(2) .form-control", "css:finder"],
+        ["xpath=//input[@name='lname']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Hint"
+    }, {
+      "id": "70495839-3713-4e35-9e64-70a081b65c34",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 'sanity.xxxxxxxxxx@beautyhaul.com'     .replace(/[x]/g, function (c) {         const r = Math.random() * 16 | 0,              v = c == 'x' ? r : (r & 0x3 | 0x8);         return v.toString(16);     });",
+      "targets": [],
+      "value": "email"
+    }, {
+      "id": "3bc38bf8-03ef-4b03-ac3f-36277b37fbf9",
+      "comment": "",
+      "command": "store",
+      "target": "",
+      "targets": [],
+      "value": "${email}"
+    }, {
+      "id": "7ea9ba96-42cb-4169-860c-8d528a2859b7",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [
+        ["css=.form-group:nth-child(6) > .form-control", "css:finder"],
+        ["xpath=(//input[@name='email'])[2]", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "${email}"
+    }, {
+      "id": "c67bce53-bb70-4470-b195-58be1f8ede80",
+      "comment": "",
+      "command": "store",
+      "target": "asdf12345",
+      "targets": [],
+      "value": "pass"
+    }, {
+      "id": "d0d6a974-9863-4348-a6da-a7f52d353761",
+      "comment": "",
+      "command": "type",
+      "target": "name=pass",
+      "targets": [
+        ["name=pass", "name"],
+        ["css=.form-group:nth-child(7) > .form-control", "css:finder"],
+        ["xpath=//input[@name='pass']", "xpath:attributes"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "${pass}"
+    }, {
+      "id": "c91a5677-ff1d-4019-b99e-6499c9dc649b",
+      "comment": "",
+      "command": "type",
+      "target": "name=passc",
+      "targets": [
+        ["name=passc", "name"],
+        ["css=.mb-4 > .form-control", "css:finder"],
+        ["xpath=//input[@name='passc']", "xpath:attributes"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "${pass}"
+    }, {
+      "id": "7b8396a1-0d30-4b33-8ee3-c1f883b3c7bd",
+      "comment": "",
+      "command": "click",
+      "target": "name=dob",
+      "targets": [
+        ["name=dob", "name"],
+        ["css=.datepicker", "css:finder"],
+        ["xpath=//input[@name='dob']", "xpath:attributes"],
+        ["xpath=//div[9]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b205c00-b638-4b9f-9131-d72c1438d99a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@data-view='month current']",
+      "targets": [
+        ["css=.datepicker-panel:nth-child(3) > ul:nth-child(1) > li:nth-child(2)", "css:finder"],
+        ["xpath=//div[15]/div[3]/ul/li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'December 2007')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c207949-0997-4059-958a-5949b2e36d2d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@data-view='year current']",
+      "targets": [
+        ["css=.datepicker-panel:nth-child(2) > ul:nth-child(1) > li:nth-child(2)", "css:finder"],
+        ["xpath=//div[15]/div[2]/ul/li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'2007')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5e8b693-970b-4282-98ca-6ba4b0e33daf",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[contains(text(),'2007')]",
+      "targets": [
+        ["css=.datepicker-panel:nth-child(1) > ul:nth-child(1) > li:nth-child(1)", "css:finder"],
+        ["xpath=//div[15]/div/ul/li", "xpath:position"],
+        ["xpath=//li[contains(.,'‹')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5c34c77-34ee-4f87-a5fd-0eb3e0bbec35",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[contains(text(),'Mar')]",
+      "targets": [
+        ["css=.datepicker-panel:nth-child(1) li:nth-child(8)", "css:finder"],
+        ["xpath=//ul[2]/li[8]", "xpath:position"],
+        ["xpath=//li[contains(.,'1999')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9109276f-d86b-47f2-968b-30565367c641",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pl-2 > .btn-secondary",
+      "targets": [
+        ["css=.pl-2 > .btn-secondary", "css:finder"],
+        ["xpath=(//button[@type='button'])[16]", "xpath:attributes"],
+        ["xpath=//div[10]/div[2]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Male')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e60acbd5-5b1c-4df0-b0cd-ea3e7c7fe3a7",
+      "comment": "",
+      "command": "click",
+      "target": "css=label[for='termCondition']",
+      "targets": [
+        ["css=.mb-3 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[12]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "236c3227-09d3-4656-87c4-58f03aafa57b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Register')]",
+      "targets": [
+        ["css=.mb-3 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[12]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8561f963-fa49-4a38-ba0e-b9218a475cae",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//h3[contains(text(),'Selamat!')]",
+      "targets": [],
+      "value": "Selamat!"
+    }]
+  }, {
+    "id": "06b1965b-7c34-4c37-a3a3-2d3c8ba4a8b2",
+    "name": "Sign In account",
+    "commands": [{
+      "id": "45323fe7-7554-4b06-bcfb-d4236e0b4761",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c459bb2-f993-4ff1-96c7-754bfebf2475",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68036a41-c9b2-4898-a604-ff8725340396",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc536629-50e1-4a28-aaff-3df3d94981fb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-account']//button[@type='button']",
+      "targets": [
+        ["css=.nav-menu-account .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//li[2]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cfc2c768-3be4-480f-b9fc-d2166e571818",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [],
+      "value": "rizky.febrian@beautyhaul.com"
+    }, {
+      "id": "9c87227d-9c3c-404b-a1dc-73c87d4c54cd",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.mb-3 > .form-control", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "123456Xx??"
+    }, {
+      "id": "be4f2be1-edfb-40a8-866f-c861ecc61c51",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Login'])",
+      "targets": [
+        ["css=.mb-2 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[7]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb5562c5-442c-436f-8540-a1a83f2bef38",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "0874a21e-f2b3-412e-98c8-158b5072c17d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b149be71-a301-4ac9-b067-ca01ac1ffdc8",
+    "name": "OS01_Order product",
+    "commands": [{
+      "id": "cf73d7cc-b226-41be-8efe-e228b8c119a0",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05ee5979-cbaf-47f4-b29f-154850ea6e22",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a285398-9793-4a9b-9557-4806b4b4188b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0abf3fa-1e2c-4778-b719-dabd5629e09b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "251b7426-beab-48d1-b052-e4bed239fc28",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4740a8ca-8000-4801-b639-706f271e65ac",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "50bc7eda-1273-4d22-a91b-5ad02652d969",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "95ab2e2c-33e3-4cee-b8d8-610bc75e1402",
+      "comment": "",
+      "command": "click",
+      "target": "css=li[class='nav-item nav-menu-cart d-none d-sm-block'] span[class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "30c3e9b0-c0b3-41f1-9d4b-2a130190afa7",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "71e921ea-c2a1-4627-898a-eea8dfce41ae",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "63a18671-db07-4e5f-b978-545a71ba5343",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "80d429dd-d24f-4c5b-9b22-9937320b79fc",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "773c5870-80ea-4e1d-8d9d-b5cd292e1f55",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0d55c1d-ee78-41b7-be6b-ea55f102ee82",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "27d58927-bb53-40b4-a79a-a1f0906f88e2",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "a180c236-a35f-45cb-be78-98d8cad922ea",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52a47301-23e4-4338-b913-85d90c7ae91b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "093a9920-b3e8-419e-a68e-29cfa4edc47a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "27c6f0ca-3cbd-4cd3-9445-b7f9ea2bc575",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.ship-summary",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "b8e0bcf3-2594-4684-80fc-0dc341cf3ded",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Place Order'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff0c42e6-43cc-41ab-8db7-e36f3077b57b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3202d1ae-585d-43fe-9d3b-34af11c014cc",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "998677a4-b3ca-4d47-a82c-7688e89a7346",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }]
+  }, {
+    "id": "607f83aa-f1ba-4c0c-a92c-0bb090eb5a53",
+    "name": "OS02_Order product variant",
+    "commands": [{
+      "id": "576570c6-6d6b-4097-8f74-cc145ff67114",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42928b3c-d65a-49fa-8480-5770c1e35b7b",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-variant-snty2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "29a02d2b-a3d5-41d3-8e3b-5ab8835afa29",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cb3b439e-281d-4ac3-9180-15669daf863f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "e4b47280-2d2f-4b7b-a98c-5d6256546f4b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "50f08cb9-d22d-4b32-995d-805ea4b09b5d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d1c817a-44f3-4f7d-b6fd-f7f14faed30e",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "7e2778b1-f34d-4523-880e-5cabbcf11d0d",
+      "comment": "",
+      "command": "click",
+      "target": "css=li[class='nav-item nav-menu-cart d-none d-sm-block'] span[class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "676f292a-c352-47d1-9100-ed7dd9a242cf",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2feebaef-8e1b-4c8e-a413-f2d3e06325fe",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba5ed978-f51b-4f7f-a79d-d9da3498455a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0644dd8b-ed8e-4a3e-9a96-e50ec404ddba",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "786dfe00-d31e-4568-84b9-35a6f3a9f647",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac428021-d655-4387-a2d3-8ba89f57d697",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc911ab2-1c6b-4ed1-b89c-e36d54639bf3",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "c1441694-88e2-4c36-8ebb-037faeaba689",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac7cbb3d-1d37-4746-936d-da88e4c81391",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3f17155-ce9f-45f1-8329-0516ce250aa1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03e7f211-52ef-4ead-8674-05f246fe810a",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.ship-summary",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "54a4d999-b268-4501-9680-defcaab591d8",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Place Order'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd41e1bd-1b14-465f-921a-e9a9b0e79397",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "46de5fed-c4c4-4aae-a0ba-f362f8da3f31",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "59905e8e-8949-45f1-bbdf-27d72bb2b11a",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }]
+  }, {
+    "id": "5e9b01f5-5de9-41a4-8fa4-b2a18b429c49",
+    "name": "OS03_Order bundle",
+    "commands": [{
+      "id": "bf99e867-5832-4a11-a957-c6f75318f46e",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9cf23589-221b-447c-aaa1-9c86181e47e3",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/bundle-variant-snty1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74370a97-8391-4d33-b77b-fa3dc03b9f13",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f9fc8fcf-b7df-47cb-a1b6-3e016e609111",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "4ea2814e-4d7a-46b5-9d16-aa960e296b2d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c30795e9-bae5-4d2e-bc20-77c737c564bf",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0777d1e0-018d-477e-a837-ba27b07ab4dc",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "7173c7d2-2566-4d9e-b8ea-f47aa0bbe259",
+      "comment": "",
+      "command": "click",
+      "target": "css=li[class='nav-item nav-menu-cart d-none d-sm-block'] span[class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb7ed317-ee9c-4b51-87d1-a97f15e267f3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2cc2ee5a-f782-4198-8a43-cb8a77875fed",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d206768a-d1c9-4c2f-833f-2652e3d2d884",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e2caecc-a93f-4a3c-b0b0-013573702f90",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9bc82bc8-09fd-4e51-8d06-ca9ff6fe971e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3a94db4-1503-4b1a-a788-398b338fa88e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8bfc01da-ca3d-47c7-9e62-05a32af14be5",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "216d5a7a-d135-44d8-b12e-0d597487d6b1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f934e44-1dcb-4738-b465-116583c7aad2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e62f397-fef4-42bc-acb9-49bfb8895d0d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "77d7680a-dcc0-42ae-8cde-b167adfe3df2",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.ship-summary",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "af8a604d-7f7f-434b-bbd9-d7238297e473",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Place Order'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1acef76f-b8c5-454d-a4d1-3061b9fa1d8d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b1a3bfc-77ed-41d5-b132-93b08f48fe5f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "60d94976-b9ee-4226-ba77-e070b0d8e411",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }]
+  }, {
+    "id": "6dde349c-bb32-4826-a9f1-4e60408079a9",
+    "name": "OS04_Order bundle variant",
+    "commands": [{
+      "id": "c5005c36-639c-489a-ab70-cc1fb8e87169",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f0fa9ef-3ec8-4aec-8bcf-fe1923715c89",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/bundle-variant-snty2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f127db8-2f2a-4303-86bc-f844a84c7bd6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05f5ac45-058f-4aeb-ba1c-8cc376f4d340",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f6e1ae24-42e9-4fc3-a82e-d1adbc0662ac",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "49671dba-cc09-4f53-8869-259f58ad3ea4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d457186-09a5-4d74-96ea-00d5b94ee289",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "b09a2ee9-4dfd-4927-8a2d-257116586930",
+      "comment": "",
+      "command": "click",
+      "target": "css=li[class='nav-item nav-menu-cart d-none d-sm-block'] span[class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f7f09d93-1264-43ec-ae11-8c8dd6049008",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5edab234-e0aa-4519-bf2b-04187b490caf",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb6d1e56-7fb2-405d-bdb3-164ab8c40166",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef3423d4-3dbe-487b-95d1-edb8620801f0",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "b2690be7-61e3-4fa0-9b9e-2d26e275d558",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f7307929-e5dd-4c51-80b5-417b225d3b5d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1956e478-b2c6-4541-b808-2a7b35004738",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "d4555cda-2c53-4615-9fdb-43d0966a994e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52b22acb-2edc-49b0-9402-5247781682d0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e914a67f-52d2-4717-96cd-bae0f3721aee",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b07155e-ea9b-4939-8456-5c2c306f7cb7",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.ship-summary",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "5dd4f0c8-fe09-405f-ab9f-7ae67ff89dc7",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Place Order'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1b017467-0e05-40b8-91df-f3e0819e294f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9cbf503-ff84-488c-b0b6-58f655655b11",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "44299db1-ab70-4b55-8664-ae28ed9673fc",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }]
+  }, {
+    "id": "c82b6778-ae0e-487b-83ed-815b1a00912a",
+    "name": "OS08_Order Promotion Product",
+    "commands": [{
+      "id": "20fdad05-41cd-4bc3-b7f8-1ef688566c1f",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7095f556-75db-46b5-8ec7-7ea4072e1a92",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/testing-single-snty",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "356b05fb-df4f-4bce-a2db-0058f88a3c0d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a3ef849-acd5-463c-a299-f1716de1b7e5",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "457cce6f-549d-41cb-af25-38a1bfac45a3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//small[contains(@class,'discount-off-detail')][contains(text(),'off')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ea3a696-fcdb-4582-99b9-aada6098ac41",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03914400-504f-426e-8660-3b460ac0a274",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e4e9aa9a-742f-40db-a3c0-9150e21a4320",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "cc047665-56b3-41ca-bbd9-1568256b7f16",
+      "comment": "",
+      "command": "click",
+      "target": "css=li[class='nav-item nav-menu-cart d-none d-sm-block'] span[class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bbea6ee-5b3a-455d-8790-af981cf2e847",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4626b90d-bd77-425e-9cdb-b174be95d9a5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd217b47-9ecb-4334-8698-f4213f15a03a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "adca5960-dfe0-46f6-a114-141edaaa8fa3",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "0931fd8a-0074-465f-8d32-11307b84d884",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd32601e-5336-4c46-a58d-57065fa0d890",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cfb7b22b-2ffc-42ae-9e67-1475d81f62f7",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "e417d7d3-d287-4ebe-8514-9c803934d951",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0abce20e-779b-4ae4-8ea7-a56e44a80f22",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cdde4b64-0c6c-4e42-ba02-5b2737d55561",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5b4ba71c-bde7-4f6c-8555-e9439708bc39",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.ship-summary",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "0ce07d7c-d0b9-455f-b2b7-22578225d4de",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Place Order'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48d2063b-20d2-428f-94ca-8243a3af28a4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee5d6505-b5b9-44db-82d1-9dc8eaab89b4",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "fb6f18b2-5045-4827-a585-569f9eb75831",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }]
+  }, {
+    "id": "2b4b7584-80f4-4aa3-ae10-3b7c1d4f7853",
+    "name": "OS06_Order with dropshipper",
+    "commands": [{
+      "id": "a8195dba-dd0b-476f-9d25-1dd13c744864",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68e33e92-9cf8-47b4-9e48-c3dc966f133e",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/bundle-variant-snty2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c4f6b9e-556c-4ef9-aa2f-c033e6cd8e7c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "553ab97a-adbf-4e33-bacb-b7e0ae6e06d3",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "5b83fb95-6b72-4c6c-a288-aab2646cbcc9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca8d9f6f-6cf2-4a4e-a864-085b7c35e48e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca79ffb7-b338-4afc-99fe-b739718e357d",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "ca253cae-3a8d-46ed-b570-da4cf533141d",
+      "comment": "",
+      "command": "click",
+      "target": "css=li[class='nav-item nav-menu-cart d-none d-sm-block'] span[class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "41f7fdf2-b314-4757-8225-0a20aded2724",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd7c3fa4-c2c9-4aeb-b028-54a4f9d0015f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fab4177f-9f3e-426b-b64c-516dccde5ad2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f57befd8-7821-4217-8b24-3f8973543176",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "8a97f0ab-2e93-4df0-b397-c72a079c639b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//label[@for='myonoffswitchdis-dropship']//div[@class='onoffswitchdis-switch']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4a74623-3fec-4b28-845d-f0acc9ab1203",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//label[@for='myonoffswitchdis-dropship']//div[@class='onoffswitchdis-switch']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4841d5d-4249-4d2a-9e42-e0d7d0044bb9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "name=dropship_name",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d823d7c-eaee-4971-9200-c8f4f4683973",
+      "comment": "",
+      "command": "type",
+      "target": "name=dropship_name",
+      "targets": [],
+      "value": "Sanity"
+    }, {
+      "id": "e45d14bd-7fa5-48a2-8a10-b02c13d8af47",
+      "comment": "",
+      "command": "type",
+      "target": "name=dropship_phone",
+      "targets": [],
+      "value": "08123456789"
+    }, {
+      "id": "c87e8e9f-8450-4566-873d-9698c610696d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "955f206f-43a7-4ee8-b2f8-d1618d0b6bb9",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7617d96a-34d8-43a1-838a-93c05511f67e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e953802-a5e0-434c-80f8-997f07148c33",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "60cd3b4d-cfd1-4d0c-8fd5-b9adc8df78e4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77bfd27d-4854-46c9-8e4c-841b8235ef6f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "749508c7-8d7e-49fd-8360-263cc809a129",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "638502d4-9fc9-4959-9aea-7658012dc5d1",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.ship-summary",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "3d081d56-6f94-42c3-a465-87adf9fa2c09",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Place Order'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "36430f8d-2f94-45d3-be4a-ecc4de23c6d6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9ad2aa9-8afb-41c3-95f0-3d072db57950",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "8d906d24-b0df-4cb0-8f92-3484dab4be41",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }]
+  }, {
+    "id": "493010e8-cae7-4113-acdc-6526a2bada32",
+    "name": "OS07_Order with notes",
+    "commands": [{
+      "id": "77585377-922f-489c-b81b-af0d5896f571",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19d94805-d890-414b-859f-93f38aaaf03c",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/bundle-variant-snty2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5d6943a-a4ed-4fdd-8f30-0362c990e184",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb8784a4-d160-43a9-98fb-59759f7910ac",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "96361fa5-8e6b-4880-b38d-609998418775",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0e0e6bc-7df2-485c-b6ed-20c832079493",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e326bbc0-2301-4ce5-8005-bc0bd61ab684",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "8acda5a6-f5df-4034-b489-2f9b5e6b7362",
+      "comment": "",
+      "command": "click",
+      "target": "css=li[class='nav-item nav-menu-cart d-none d-sm-block'] span[class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "85c075ed-18fc-4007-b174-de9e22b12f04",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51cc3dc8-b550-466c-bdab-c59a085e3e3b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "862cf5d1-7eb3-4044-96d1-756cf6caf68d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "14b9761e-da33-4764-9da4-68d566b30134",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "602fce1b-c3b7-4624-afe8-f53a6afc4e63",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "46791aba-52a7-4dce-88a8-ad7bfff6f3b3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f612b188-8d7f-447a-abce-57d34210eeac",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "4c53c60b-31e5-46f4-8d41-5384f76ca9bb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c69441d-f000-4c36-bb72-9e0fef670ab5",
+      "comment": "",
+      "command": "type",
+      "target": "name=note",
+      "targets": [],
+      "value": "This is example for note order"
+    }, {
+      "id": "b53d9132-2adb-4c1a-af47-5d1ba0190d4b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7644c0b2-f8ae-4255-bbb6-5e86490b7111",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cae31cca-42d0-4f6e-8d82-ed27e23d5fdb",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60b10a41-732d-4e9f-847f-4f04d2667041",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.ship-summary",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "0451ec07-80dc-48be-a7a1-6d42bde3cf3a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Place Order'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f1c4aa39-f7b6-4402-8e81-8fedc3059884",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a02239e-cab5-4372-9215-9d31ff8f952a",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "0ff899ac-2718-489e-bd90-803c505a0c0f",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }]
+  }, {
+    "id": "47235aa5-3338-4b7e-b976-f3392e1e4068",
+    "name": "OS05_Order product more than limit order in a day",
+    "commands": [{
+      "id": "07f6d0ba-8d6a-4863-a4b2-c424d6bdf572",
+      "comment": "",
+      "command": "run",
+      "target": "Register Account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a3fa52aa-dd71-4a7a-8a57-edfdbb74f65b",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In Valid email and password",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c62ad71-515a-412d-83b2-cd697ea1551c",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/travel-size-realm",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "057cc8dc-9381-460b-8f69-17730ada9896",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "abd60e3e-6693-4089-99ed-9e35f883d07b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "468089df-1a25-4303-82c1-b4425b2f3228",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='plus']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "24a7d9e2-ded1-4253-bc24-186a50296c04",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='plus']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9dd1deea-48ad-4299-bfc7-781cf3da6a81",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a395a0d0-704d-4884-95b3-49d7bd20ae05",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ed92e87-bfdb-4bf4-83c3-26f9d6e2c45a",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "4d2c82c0-2b89-4b5c-be99-462d5356f5dd",
+      "comment": "",
+      "command": "click",
+      "target": "css=li[class='nav-item nav-menu-cart d-none d-sm-block'] span[class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae91327b-1146-460f-b1c8-690786fccd5b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0501d729-f6fd-41c5-a680-8f867b5567be",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "98f4d556-0494-41ef-8bba-701d37e2eae3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9670be29-f3da-4350-b960-c5b0c36b6f08",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f339309d-4edb-4869-ba33-a639da914084",
+      "comment": "",
+      "command": "type",
+      "target": "name=ship_fname",
+      "targets": [],
+      "value": "Sanity"
+    }, {
+      "id": "36deff23-53f5-443b-81e4-caec04e92919",
+      "comment": "",
+      "command": "type",
+      "target": "name=ship_lname",
+      "targets": [],
+      "value": "Test"
+    }, {
+      "id": "eaecbaed-e2fe-4379-a87c-c7c9e6c159b2",
+      "comment": "",
+      "command": "type",
+      "target": "name=ship_address",
+      "targets": [],
+      "value": "Jl. Kembangan Selatan No. 10"
+    }, {
+      "id": "0a775974-6189-4f36-a278-f1e3847d0807",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(@class,'form-control-ship_city')]",
+      "targets": [],
+      "value": "Jl. Kembangan Selatan No. 10"
+    }, {
+      "id": "75011c75-6e01-4f1a-9549-fa7b3ccd4e7d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(@class,'select2-dropdown-open')]",
+      "targets": [],
+      "value": "Jl. Kembangan Selatan No. 10"
+    }, {
+      "id": "dc6d4aa9-cb26-414b-b7df-b75f23be5663",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "722455d3-d837-49db-9f5c-b735d4253937",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=#select2-drop input.select2-input",
+      "targets": [],
+      "value": "Kembangan"
+    }, {
+      "id": "9f30a6fc-60ed-4997-9bd9-743fc827a7ed",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//li[contains(@class,'select2-result-selectable')]/div[@class='select2-result-label']/span[text()='Kembangan']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "55ce6672-c3ae-4e14-8676-f2be9633d09d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[contains(@class,'select2-result-selectable')]/div[@class='select2-result-label']/span[text()='Kembangan']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "64753a26-bc33-4fd0-97d5-d232fdb08add",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "//span[@class='select2-chosen'][text()='DKI Jakarta, Jakarta Barat, Kembangan']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "84e354a5-dcc9-4f1e-b6d4-3c5d77c249b3",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9c97870a-2188-4d08-9669-5db4994f2be8",
+      "comment": "",
+      "command": "select",
+      "target": "name=ship_zip",
+      "targets": [],
+      "value": "label=11630"
+    }, {
+      "id": "36b3d841-d464-45e0-8eb4-46ac94578877",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='replacement'][text()='11630']",
+      "targets": [],
+      "value": "label=11630"
+    }, {
+      "id": "746c97e1-e1c3-4d77-b055-cf5417f5da8a",
+      "comment": "",
+      "command": "type",
+      "target": "name=ship_phone",
+      "targets": [],
+      "value": "081234567890"
+    }, {
+      "id": "05c9b2d0-073c-480b-99d8-cb83c6a8c631",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e630e9c-725c-4de2-8e99-aa3a16e1d458",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "de559309-43fd-4afd-92c6-480a554b5339",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8981424-dc08-4af2-941a-7f13586b2546",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "c673f75d-afda-43ae-9ac4-cddf60ae4ac0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4fe1d40a-22c2-4fb7-8ea7-ec4ab8bc3aab",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "88aac2ee-41fa-44c1-ab79-2a2bddffbe3a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3533361-7821-4c59-b731-143e3a62aac2",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.ship-summary",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "122ef33c-7f36-4d21-95cc-b7d1fe26d3b2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Place Order'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "654cacd8-a048-4b22-b258-79077a034ab7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "088d81b3-3cfb-4b13-a855-ef3428fe2476",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "eeb4f6a0-a6d9-49ee-a2ad-f151780be76a",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }, {
+      "id": "0d00d389-f95f-427a-8c6b-003180e25225",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/travel-size-realm",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff89db76-cde8-42b7-b78a-e6c03a09bc58",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c40b1ed-180f-45f3-bb3b-4610bb2588c5",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "0c8b9ab2-20bd-4ed4-9595-a2a2bde18185",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='plus']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f358af5d-afc8-4dcb-8012-ab2a84811244",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='plus']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09504993-ee44-46a0-b3b8-8679f06acd8f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e12c886-b776-435c-95f0-01a2d4c4ffd8",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "25446fb9-2717-4d32-836b-53a00617de97",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "5d40e14c-3222-455a-9f7c-7cd34eba7be9",
+      "comment": "",
+      "command": "click",
+      "target": "css=li[class='nav-item nav-menu-cart d-none d-sm-block'] span[class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c7d145b-c2ee-4ce5-93a8-1ef64d8a81dd",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2efb059a-b939-4b09-98f9-2d7822f52335",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1995757e-7df2-4c86-b23f-dcc75680e705",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f05e0a2-704a-4bde-81d8-956070760c8e",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "a688785b-71c6-491b-8710-08c11e87bef3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "54477c4c-3778-49d7-9b6c-91f424ebd607",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//div[contains(@class,'limit-error')][normalize-space()='Some item(s) has been updated / removed']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "b8b4b24e-e089-4ee2-b397-856e370a9c57",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[contains(@class,'limit-error')][normalize-space()='Some item(s) has been updated / removed']",
+      "targets": [],
+      "value": "Some item(s) has been updated / removed"
+    }, {
+      "id": "9cbfbbe2-f46e-43d6-8b13-b172954b5014",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[contains(@class,'limit-text')][text()='Limit belanja produk ini adalah 3pc/Month/User.']",
+      "targets": [],
+      "value": "Limit belanja produk ini adalah 3pc/Month/User."
+    }]
+  }, {
+    "id": "1ff540ab-a6ef-4b43-9414-f1c11c126789",
+    "name": "Sign In Valid email and password",
+    "commands": [{
+      "id": "88517a53-8d8e-448b-a43b-2435e4bf8509",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "67b4fbc2-a77f-408a-9234-cf81cfa2416f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1619a8fe-a230-4aaf-b023-2224fb1d2ed9",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-account']//button[@type='button']",
+      "targets": [
+        ["css=.nav-menu-account .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//li[2]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a309b73a-3bd5-414f-89a1-fc383881534a",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [],
+      "value": "${email}"
+    }, {
+      "id": "0507f99f-584d-4c9a-8520-e04b0c80d1fd",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.mb-3 > .form-control", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "${pass}"
+    }, {
+      "id": "d1bf9177-ca35-4829-b33a-cf5bd7a93521",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Login'])",
+      "targets": [
+        ["css=.mb-2 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[7]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "49b6cbfb-4c65-4366-bf22-afabd2b26332",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "3430c5ed-4013-4c05-aa4a-8cc06d10468b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "48f06a83-9dc3-495a-8d5f-b7707d1daec0",
+    "name": "Order product out of stock",
+    "commands": [{
+      "id": "5012c847-2e78-4d60-9f22-6656341f45cb",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b52c228-6962-4d85-9a82-57dc3dd51e90",
+      "comment": "",
+      "command": "open",
+      "target": "product/detail/sanity-2415",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "46b19e34-4dcd-40bf-8ca3-d289860c593e",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.oos-text",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9489a715-46b0-4da5-bca5-8327268f4127",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.oos-text",
+      "targets": [],
+      "value": "SOLD OUT! NOTIFY ME WHEN RESTOCK"
+    }, {
+      "id": "46d34cb0-222d-4bd4-acc8-6cbd527d233e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[normalize-space()='Notify Me']",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2ec792f9-08d9-40f4-a3b2-40dc4f9e5b9a",
+    "name": "Order-Staging",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 60000,
+    "tests": ["b149be71-a301-4ac9-b067-ca01ac1ffdc8", "607f83aa-f1ba-4c0c-a92c-0bb090eb5a53", "5e9b01f5-5de9-41a4-8fa4-b2a18b429c49", "6dde349c-bb32-4826-a9f1-4e60408079a9", "2b4b7584-80f4-4aa3-ae10-3b7c1d4f7853", "493010e8-cae7-4113-acdc-6526a2bada32", "c82b6778-ae0e-487b-83ed-815b1a00912a"]
+  }],
+  "urls": ["https://www.playbysomethinc.com/", "https://www.playbysomethinc.com/admin", "https://hintofyou.playbybeautyhaul.com/en"],
+  "plugins": []
+}

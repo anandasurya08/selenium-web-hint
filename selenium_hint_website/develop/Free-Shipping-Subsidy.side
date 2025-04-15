@@ -1,0 +1,815 @@
+{
+  "id": "48904f72-f331-49de-986c-b8d7593616d9",
+  "version": "2.0",
+  "name": "Free-Shipping-Subsidy",
+  "url": "https://hintofyou.playbybeautyhaul.com/en",
+  "tests": [{
+    "id": "06b1965b-7c34-4c37-a3a3-2d3c8ba4a8b2",
+    "name": "01_Sign In account",
+    "commands": [{
+      "id": "45323fe7-7554-4b06-bcfb-d4236e0b4761",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c459bb2-f993-4ff1-96c7-754bfebf2475",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x901",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68036a41-c9b2-4898-a604-ff8725340396",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc536629-50e1-4a28-aaff-3df3d94981fb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-account']//button[@type='button']",
+      "targets": [
+        ["css=.nav-menu-account .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//li[2]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "56fbb02e-6f4b-4219-8623-c42e85e01474",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "cfc2c768-3be4-480f-b9fc-d2166e571818",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [],
+      "value": "shabrina.shabrina@beautyhaul.com"
+    }, {
+      "id": "9c87227d-9c3c-404b-a1dc-73c87d4c54cd",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.mb-3 > .form-control", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "abc123"
+    }, {
+      "id": "be4f2be1-edfb-40a8-866f-c861ecc61c51",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Login'])",
+      "targets": [
+        ["css=.mb-2 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[7]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb5562c5-442c-436f-8540-a1a83f2bef38",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "0874a21e-f2b3-412e-98c8-158b5072c17d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b694901c-15be-4bc7-90df-7637b7aa8743",
+    "name": "Order when total > minimum free shipping",
+    "commands": [{
+      "id": "c03dd037-55b6-4d33-8cba-3f1257a14d55",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6296d5b9-bc4d-4fa2-8e81-dc4d46605cbb",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/hint-realm-2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91046094-ff11-401c-97ea-8b583b5c2d79",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e3f0bdf-988f-47bf-89f0-65fef1155eae",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "7a7b1f95-6f5c-4b93-b097-f4a68f5c1256",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8aea08cf-c089-4c8d-b13a-61ad66c8d51c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bcf5a9d-9c0c-4419-a202-583f76597aad",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "5882b356-6854-4188-b4fb-1e1a6268233e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "07b19411-ef77-4c40-aece-06810a97be5a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[text()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8037e5fd-aa06-4406-a7ee-10469c2e3110",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[text()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4540642-21e8-4f81-8dec-8317963fe1c3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "acd46edd-2788-475e-8863-78fbfc2f43ed",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "4d683903-c9f9-4db8-ad3e-4d8aada3ae4f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "078ee352-8ddf-44b8-bb9d-0d45db82b63e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1901e92-2479-44a9-a16b-abfc0c89c6e7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e882236-c434-477c-af32-36eba7eb5146",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "e7abb03a-cfcf-4714-a036-d2068e3b8052",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4cf9690d-2087-4664-ace5-5d9f74f947d8",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//label[@for='shipping-4']//span[@class='cred'][normalize-space()='Free Shipping']",
+      "targets": [],
+      "value": "Free Shipping"
+    }, {
+      "id": "69917914-dd76-4375-9296-5f132c457cc3",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Shipping Disc.']",
+      "targets": [],
+      "value": "Shipping Disc."
+    }, {
+      "id": "e2f4abf1-ae29-4fc5-b379-776ec7e55661",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9962b8a8-fe51-4916-8ebd-248a2d23c580",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d276f416-e0d5-472c-bae7-d849b834c46e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df25eeae-30b5-4cce-8f24-6f2dc38b649c",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=(//u[contains(text(),'Change')])[1]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "68308e1b-eda0-4ecc-ac45-06aab13c34be",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[@class='btn btn-block btn-primary btn-checkout btn-custom-bag'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "447c2d23-6eb8-42a2-b825-5244be0847ef",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[@class='btn btn-block btn-primary btn-checkout btn-custom-bag'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b30ff3ae-f64f-4d13-96e8-af6748d489a2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "67e16202-4a6c-41a4-9ab9-a219fc694aa4",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.payment-info-wrapper",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "df21568a-0c4b-47d2-8f2a-a5fc45ecca64",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }, {
+      "id": "d59e9ff0-2b5d-4f06-ac9f-6aa2992764c9",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Shipping Disc.']",
+      "targets": [],
+      "value": "Shipping Disc."
+    }]
+  }, {
+    "id": "24b3ecc5-2985-4ec8-9f3d-c4d5843e4d26",
+    "name": "Order when total = minimum free shipping",
+    "commands": [{
+      "id": "63744a48-c9dc-4361-a313-9d320f09ebbc",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8bfcdd15-a72e-444e-9c36-a6e04d1397bf",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a4feec9-3f83-492c-a32f-6f9aecefa2e6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2be6e3f4-4bd2-4679-b2c0-206b335b0f90",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "5f64ec7d-ac7a-406b-834c-a2fe509e507a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "43d8216d-4316-48d3-97d8-efd7e483ee10",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0333a0ec-f3d4-4b39-9d49-89038bf3a4e6",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "0791a46e-7c74-4032-be23-2fa7869dfe7e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "86f1b2de-22ec-4a12-b478-72e83c274363",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[text()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1377fdb5-f06c-491c-b37f-e4c3172ffd0e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[text()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "14768612-3d3f-4b0c-8840-60b4fbd27677",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95261981-fa07-4bfd-bf44-10ff8df10a1b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "4dae79b8-6d64-404b-a56a-98666456a79d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a6c85b3-360b-4a48-9efc-39b38369080c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a084d471-d07e-411a-93ec-51fcd60f75c0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b42c45ad-b628-4b89-b6ee-d1a2c9a887e0",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f7505ccc-d7bc-4a26-acab-6824f60174bd",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f3c30ee2-e0e2-4cdd-a6ab-d434db9b3436",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//label[@for='shipping-4']//span[@class='cred'][normalize-space()='Free Shipping']",
+      "targets": [],
+      "value": "Free Shipping"
+    }, {
+      "id": "a9a79ec4-d51d-4946-9709-1c59d165fb51",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Shipping Disc.']",
+      "targets": [],
+      "value": "Shipping Disc."
+    }, {
+      "id": "73ab1ca5-82f6-4501-bd2e-14eb8f7b2786",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6023fd90-89eb-4288-a436-f44ae384e613",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "24b222f4-9682-4f34-ac2c-9ac04fcda5a7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8723cf2d-dee4-4033-9be8-86bb2d1a7f32",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=(//u[contains(text(),'Change')])[1]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "3251c5a3-82e2-4e4c-a2d1-f5f216426075",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[@class='btn btn-block btn-primary btn-checkout btn-custom-bag'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b3c8c0b4-4b32-4770-88ed-2dc34e62dfcf",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[@class='btn btn-block btn-primary btn-checkout btn-custom-bag'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b7df2e9-2a55-45be-9e0a-1cb3f29b9c09",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "43df3b2a-2be1-4016-a7fd-6a7019bb3bbf",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.payment-info-wrapper",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "873f9070-c254-4273-a620-5303a8b93a88",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }, {
+      "id": "878c47df-8e92-4457-ac58-7eba355bba2b",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Shipping Disc.']",
+      "targets": [],
+      "value": "Shipping Disc."
+    }]
+  }, {
+    "id": "a51795e3-9b37-44d0-979e-60478af8ea88",
+    "name": "Order when total < minimum free shipping",
+    "commands": [{
+      "id": "81e6f8a6-a2be-42a1-b1f0-10e659ef4952",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98624867-69c0-4524-9664-71da13f10576",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/perfume-body-mist-strawberry",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b67dcb1a-e91e-457d-bf14-d579b7f157ca",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e8f12796-de18-486c-8d86-3269b746ebcb",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "5460cb90-3a90-4322-aed4-4002519562f6",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c5d7687c-2ebd-4973-bc2f-de105ed10e88",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "76380e88-bc83-4477-883c-8c493e397fac",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "594e2f9f-2e84-4869-bca4-3fb7e4f57e07",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "510aee6a-c272-499f-8388-0c66f2de38ec",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[text()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b0739c82-9d55-4143-bc82-0ebaff3ff59b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[text()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ee271ac-6cfd-4497-a2b0-7ac65a75ec93",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e8bd0ac0-297e-4eb3-8003-0710dcf14767",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "e61bca1f-f4d4-4596-bc82-1e5ac379d7ae",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "caa4abe8-f28d-4a80-9898-a59c3b63cc5b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "65dba7ac-efc9-4f11-96d1-446cb74a4726",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48d7a69c-cb68-458c-921b-04a221b3b472",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "05320d7b-6c52-415b-85ab-71ed461b9412",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97c43dcc-d41f-40c0-8d35-6ffff8403dd6",
+      "comment": "",
+      "command": "waitForElementNotVisible",
+      "target": "xpath=//label[@for='shipping-4']//span[@class='cred'][normalize-space()='Free Shipping']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "e0f254cd-349b-4b97-a645-7b39b7edfd9d",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//label[@for='shipping-4']//span[@class='cred'][normalize-space()='Free Shipping']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "10c6702f-0c76-4ac7-abb1-9ba00c739012",
+      "comment": "",
+      "command": "waitForElementNotVisible",
+      "target": "xpath=//div[normalize-space()='Shipping Disc.']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "7f3f73dd-b6cc-4b53-91c4-f3e69467cfa7",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c322e4aa-f968-4d6a-b8a9-846e42bd23e1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "98e35ca8-6838-441b-a79c-336e271d255a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1e44cf64-fef2-47d2-b59d-bdb9775b252e",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=(//u[contains(text(),'Change')])[1]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "fa481466-a8ce-4ef0-aaff-356c9c82903d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[@class='btn btn-block btn-primary btn-checkout btn-custom-bag'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "908222c7-1d97-48cd-9afa-f0cee568e4c7",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[@class='btn btn-block btn-primary btn-checkout btn-custom-bag'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "954683ed-c1bb-44f0-a821-0b90f654ca2d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b397f185-cbc0-4dfa-ac39-5f1c9e7fae59",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.payment-info-wrapper",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "27850eff-6eb7-4b4c-8186-b3267e6dbad4",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }, {
+      "id": "0e81bfc7-28fc-4c0d-9dbc-72710adc92e7",
+      "comment": "",
+      "command": "waitForElementNotVisible",
+      "target": "xpath=//div[normalize-space()='Shipping Disc.']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "d16846f7-095b-4c76-80c3-d0e7cbdc1a4e",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[normalize-space()='Shipping Disc.']",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2ec792f9-08d9-40f4-a3b2-40dc4f9e5b9a",
+    "name": "Free-Shipping-Subsidy",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 60000,
+    "tests": ["b694901c-15be-4bc7-90df-7637b7aa8743"]
+  }],
+  "urls": ["https://www.playbysomethinc.com/", "https://www.playbysomethinc.com/admin"],
+  "plugins": []
+}

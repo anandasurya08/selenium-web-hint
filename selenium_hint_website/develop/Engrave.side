@@ -1,0 +1,1773 @@
+{
+  "id": "2fe8105f-0e9c-40a4-a60c-874e7c086cdf",
+  "version": "2.0",
+  "name": "Engrave",
+  "url": "https://hintofyou.playbybeautyhaul.com/en",
+  "tests": [{
+    "id": "e67914bf-04c3-4df7-96ca-2ce1572b340b",
+    "name": "E01_Order product engrave > add to bag > engrave now",
+    "commands": [{
+      "id": "1968e07d-aeaf-437d-92c0-670e753a587c",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f5a5cca4-8e73-4090-bdac-d82b72f0ac83",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d4c5d824-ab8a-4635-b7ce-c063baf8833c",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Add to Bag')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "0a18be1a-d989-49f4-8803-58e41506f384",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(text(),'Add to Bag')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b003f3ce-c989-482f-8cb6-0ca05ac766f8",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Add to Bag')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e18ca515-d7a2-4cb4-98f7-d94ca5b2d808",
+      "comment": "",
+      "command": "waitForText",
+      "target": "//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "f5da9f37-8c36-41da-a1e1-5d0142604f67",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e0c2eaa-7283-45e8-a1ea-c133e760a8ba",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Add Engrave",
+      "targets": [
+        ["linkText=Add Engrave", "linkText"],
+        ["css=.cart-engrave-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Add Engrave')]", "xpath:link"],
+        ["xpath=//a[@onclick='openEngrave(this);']", "xpath:attributes"],
+        ["xpath=//div[2]/div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Add Engrave')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "50c8d386-fadb-4fb7-a39d-86a53fdea071",
+      "comment": "",
+      "command": "type",
+      "target": "name=engrave",
+      "targets": [
+        ["name=engrave", "name"],
+        ["css=.pt-0", "css:finder"],
+        ["xpath=//input[@name='engrave']", "xpath:attributes"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "nanda test"
+    }, {
+      "id": "17bf242f-8e66-4e80-98c8-24bf02113d96",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Save Customization')]",
+      "targets": [
+        ["css=.mb-2 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//div[10]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save Customization')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3bb82ee0-739d-473d-ace0-f4ad2f8e6889",
+      "comment": "",
+      "command": "waitForText",
+      "target": "//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully engraved']",
+      "targets": [],
+      "value": "Product successfully engraved"
+    }, {
+      "id": "01bd2fb1-58d7-4162-bbec-8362002c2796",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.d-none .i", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ac61558-876e-428e-8ab2-7a32bf5e7538",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Checkout')]",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-primary:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://hintofyou.playbybeautyhaul.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[18]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a923166c-38cb-485c-ab33-15bab78ef4f2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a49eb78c-025a-467c-ae4c-ea73673b45a6",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ad77ef4-8450-4f8a-ad1a-fb9f12b71441",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "a4dbd899-572c-404a-8c45-3ede8c253e6a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [
+        ["css=.col-6 > .btn", "css:finder"],
+        ["xpath=//div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Next Step')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d8525b0-1ee9-4f87-985a-49849db04895",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec22379a-f32d-484e-bdd8-ddcf0be31b2a",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "232b75eb-2727-4aa5-bf06-3ecc67f16c91",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "22cbf5aa-5dd4-47fd-a5ec-4be9329df1da",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'JNE')]",
+      "targets": [
+        ["css=.card-body-payment:nth-child(2) .col-auto:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div[2]/div/label/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "230c00a5-158c-4a53-8ccb-a810093bdac3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["css=.col-6 > .btn", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Next Step')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6dc3ef9-b404-444e-889e-0db9cd11b7ed",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Place Order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "acfd40fb-b1dd-48d8-9816-ba22f157c0ed",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d9bf63b-3870-42e0-8c86-72a82d680d47",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "da366e9d-55c4-4d59-8f01-83ce09f66605",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "cc1807c9-42fd-4401-a769-7e9faf1be23b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "e4a0c3df-6be6-493a-9dad-658e5f055aaf",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "526d539c-0741-4af5-9093-8a5d92ba6929",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "613acdea-2ff5-4f2d-b296-bc30dc7b51ef",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "Complete Your Payment"
+    }, {
+      "id": "4062a1c9-dbcc-4b21-a2e1-a4a37a5f6f29",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.cart-engrave-letter",
+      "targets": [],
+      "value": "Engraved letter \"nanda test\""
+    }, {
+      "id": "8a080c37-b7fc-4359-9cf5-05e87a77ab0d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "43f11d3b-fc78-423d-963c-ddf6e83eb6e6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4663e9b7-47a8-4d60-a2d1-6a3be5f8de94",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//a[@class='glink2'])[contains(text(),'Order ID :')][1]",
+      "targets": [
+        ["linkText=Order ID : H20240716QMTL2", "linkText"],
+        ["css=.list-orders-pay > .page-account-content:nth-child(1) > .d-flex .glink2", "css:finder"],
+        ["xpath=//a[contains(text(),'Order ID : H20240716QMTL2')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://hintofyou.playbybeautyhaul.com/en/account/order/H20240716QMTL2')]", "xpath:href"],
+        ["xpath=//div[2]/div/div[3]/div/div/div/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Order ID : H20240716QMTL2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8cc84b47-1449-4b95-a44a-6d1140f0721c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.cart-engrave-letter",
+      "targets": [],
+      "value": "Engraved letter \"nanda test\""
+    }]
+  }, {
+    "id": "1dfe927c-f015-46a8-91ad-0dd5d21d8d99",
+    "name": "E02_Order product engrave > engrave now > edit engrave",
+    "commands": [{
+      "id": "a770da6c-6c0f-4b14-b7a9-a8c884fee95a",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae5fc184-1511-4a2b-afe3-1d566ca9bfac",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9220a9dd-1f05-4128-b496-e98fc347597c",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "322c6522-fd7f-4d92-b30c-e57968e3761f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e2105eaa-3c7d-440a-af17-0337ade0c24d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[3]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Engrave Now')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "94f54d09-664c-4f9a-bbf2-bd3a12b8984c",
+      "comment": "",
+      "command": "type",
+      "target": "name=engrave",
+      "targets": [
+        ["name=engrave", "name"],
+        ["css=.pt-0", "css:finder"],
+        ["xpath=//input[@name='engrave']", "xpath:attributes"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "nanda test"
+    }, {
+      "id": "39ecce07-c266-4b1b-9b8f-c893c2672951",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Save Customization')]",
+      "targets": [
+        ["css=.mb-2 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//div[10]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save Customization')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bdfad8c4-b3a7-4c51-8a24-4992919de393",
+      "comment": "",
+      "command": "waitForText",
+      "target": "//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "866216e4-ea84-4d03-87bd-c3c0846b89bc",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.d-none .i", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5e68a86-987a-4356-bba8-95361c8bcb9e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Edit Engrave",
+      "targets": [
+        ["linkText=Edit Engrave", "linkText"],
+        ["css=.cart-engrave-link-edit", "css:finder"],
+        ["xpath=//a[contains(text(),'Edit Engrave')]", "xpath:link"],
+        ["xpath=//a[@onclick='openEngrave(this);']", "xpath:attributes"],
+        ["xpath=//div[2]/div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Edit Engrave')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1a2a2e3-a121-4b12-95f1-7c08b888f778",
+      "comment": "",
+      "command": "type",
+      "target": "name=engrave",
+      "targets": [
+        ["name=engrave", "name"],
+        ["css=.pt-0", "css:finder"],
+        ["xpath=//input[@name='engrave']", "xpath:attributes"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "nanda"
+    }, {
+      "id": "9a5326ff-1876-44d7-a45a-ef9540040d98",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Save Customization')]",
+      "targets": [
+        ["css=.mb-2 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//div[10]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save Customization')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "68cc5a96-2001-4b76-9c44-530ca8dd207c",
+      "comment": "",
+      "command": "waitForText",
+      "target": "//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully engraved']",
+      "targets": [],
+      "value": "Product successfully engraved"
+    }, {
+      "id": "ff101e71-e89b-48ba-88c6-2456e5ed039e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.d-none .i", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ee6efb6-a954-45d3-aa52-5490a4361eaa",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Checkout')]",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-primary:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://hintofyou.playbybeautyhaul.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[18]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a3bb2a6-c000-415c-8dbc-4ae79ff0d045",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f1d1b2ce-16ad-414d-bf6d-be0bbc45a149",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e0d7af3-9dca-47b1-b747-7a8458bca41a",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "a9996ea2-f61f-44af-9571-2389cbcd7033",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [
+        ["css=.col-6 > .btn", "css:finder"],
+        ["xpath=//div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Next Step')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9bd80e52-6885-4d15-9b6b-36f82047c69b",
+      "comment": "",
+      "command": "runScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ab27575e-e13b-4200-aa62-6825cc92a13b",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bf8593b-34cd-437c-80ce-26814d659502",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "bd935fdc-ab79-4f03-a9dc-22aaa4c412e3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'JNE')]",
+      "targets": [
+        ["css=.card-body-payment:nth-child(2) .col-auto:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div[2]/div/label/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "81b74cbf-496e-45e9-b0f2-30c354c5ed61",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["css=.col-6 > .btn", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Next Step')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3077e38d-ed14-43a9-9582-cfb96c456eb3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Place Order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "12eec159-d733-49ea-8bd3-fb5a9ec06027",
+      "comment": "",
+      "command": "runScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dbad1159-e2d8-4ad5-86a6-667d092095f7",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6f88a25-8406-42e8-a28b-476386cc867b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "47f50197-2536-466d-81ad-153f6307a7d9",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "fc2539c3-e13f-496e-82fe-35d759f83879",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b841e6f-1a59-478d-bbc6-741f3a56cac5",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "307dbe3d-5d82-4339-8c48-df6040d6373a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "Complete Your Payment"
+    }, {
+      "id": "6dfa3300-99e9-425e-8a16-f35e9114fdb5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.cart-engrave-letter",
+      "targets": [],
+      "value": "Engraved letter \"nanda\""
+    }, {
+      "id": "5b41d89b-1808-4cc7-b5d8-8f1dec274182",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "b0891966-020b-47d1-889b-4551dd10b7bb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-icon-login",
+      "targets": [
+        ["css=.btn-icon-login", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//li[2]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7725c473-89ca-466f-a449-c0623495a053",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//a[@class='glink2'])[contains(text(),'Order ID :')][1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "115b0aa0-d195-4e20-a76b-098443d87357",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.cart-engrave-letter",
+      "targets": [],
+      "value": "Engraved letter \"nanda\""
+    }]
+  }, {
+    "id": "8137f401-c35b-47e7-893c-021128506046",
+    "name": "E03_Order Product Engrave when fields are empty",
+    "commands": [{
+      "id": "a4557e57-c052-48cb-8efa-104613ccfdea",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "36fda20d-af00-457b-9bb6-628c230ca7b0",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "827da23e-2ae6-4be8-bbb2-27a828b25a69",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "5a7b654d-21f9-46a3-beff-bf35f858f1df",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c65e091-430c-4cf6-9820-8acfd4eab9a1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[3]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Engrave Now')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1664eb44-7af5-465e-a31d-4b9c0abb59d5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Save Customization')]",
+      "targets": [
+        ["css=.mb-2 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//div[10]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save Customization')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2992a52-cffb-4ef0-b033-8dcc4a7f9c12",
+      "comment": "",
+      "command": "waitForText",
+      "target": "//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "19ccf82d-e703-4bdc-9c06-9665bbb996b9",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.d-none .i", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "12ee4699-6cca-43aa-8c26-c1f4237946f7",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Checkout')]",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-primary:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://hintofyou.playbybeautyhaul.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[18]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f229715-bd11-4087-9006-c5c6f4a1c4c6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c347377-6407-457d-bee2-76f94b962a55",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5f558455-714b-41ce-801a-646eca367829",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "98ca2144-9482-4229-b49c-2001574d4a1f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ef3b541-9bdc-43aa-8a52-248b2d6da6d0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "abaa9e4b-595b-4d06-91b2-b9fe911fbe0b",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5eba7d08-9170-4b18-9c92-bdeeb3efdc3d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "aa291a0d-b3d2-41b4-994c-3a56db8a3ec9",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'JNE')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "55268414-ce67-44ac-9434-326cb638aaef",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22390dbd-878c-4ce5-ac18-79224c73932c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "607f8a38-6e0b-4779-adca-22d91fde5634",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "43f0f3f1-5076-4aee-ace3-34491b797c5b",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9911c4e-0b00-4559-8ec8-3686c2c54e6c",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "2395fcdc-93b8-4592-9464-9b0457794636",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "a90dd741-a4b2-47cb-b414-2ce2bc8df8cf",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b080d75a-469a-449a-9046-fdf0ccf922b9",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "60ae61d2-3332-4616-bb0b-0c4cbc1d1125",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "Complete Your Payment"
+    }]
+  }, {
+    "id": "00be5a57-184c-489b-ac65-50a5340d5149",
+    "name": "E04_Order Product Engrave with invalid symbol character",
+    "commands": [{
+      "id": "1bde74d1-665b-410f-92eb-9e86acd33f23",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5790437e-c00d-4dd3-93de-e7d528779947",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c922da0c-4d02-4e9c-a980-c4f8de657fc3",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "26d585b6-2a51-4b31-b43c-7af9f1dc0cb4",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cdf070ac-2d8b-4639-ae9c-350e80c95f20",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[3]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Engrave Now')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3950706-1f6f-4ff3-8e90-f5711bcb3357",
+      "comment": "",
+      "command": "type",
+      "target": "name=engrave",
+      "targets": [
+        ["name=engrave", "name"],
+        ["css=.pt-0", "css:finder"],
+        ["xpath=//input[@name='engrave']", "xpath:attributes"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "!@#$%*"
+    }, {
+      "id": "08e69198-81c7-4302-b32e-743f77ab3795",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Save Customization')]",
+      "targets": [
+        ["css=.mb-2 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//div[10]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save Customization')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c2951a1-c8be-441d-8163-e5af3ca468e3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.mb-2 > .form-error",
+      "targets": [],
+      "value": "May only contain alphabetical and number characters."
+    }]
+  }, {
+    "id": "b485ed0c-d5b0-4c6d-850c-ee3a0cdebb4c",
+    "name": "Sign In account",
+    "commands": [{
+      "id": "53b189df-c7a9-4b0e-85bd-e60c7e88af98",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "956551a1-9f08-48cb-808d-b71c8612e060",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be7d1a0f-7f7d-4561-b57f-e3f3ed4af83b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0712aea4-a571-4693-b270-9a447b7b6c96",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-account']//button[@type='button']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f53f1b1-7382-41c9-9314-44569ea0ef64",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [],
+      "value": "ananda.surya@beautyhaul.com"
+    }, {
+      "id": "af3a93be-e40a-4c25-a008-20c7cf7da638",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [],
+      "value": "testingBHI123"
+    }, {
+      "id": "affd0f4b-53fe-4b73-b498-87a50aaa672d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Login'])",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f2aa428e-23a8-4c99-9dfa-765f550eaea8",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "d98a731f-a413-4ff0-8b26-fb9354bc54cf",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "82575c9b-863b-49c4-8f7b-6d88f82a01ee",
+    "name": "E05_Order Product Engrave with Alphabet, Numeric and Space",
+    "commands": [{
+      "id": "c93769c7-af35-445c-9abb-e3d96a49344b",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9631e339-3964-4e5b-bd8f-407e43b9ff0c",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4dd7f800-9038-4127-ad48-263c10f10684",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "cecb6285-4325-4dab-9217-41e4ce7ed864",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db5771f0-6547-4bfa-8e56-5b9d62b7c927",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[3]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Engrave Now')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e003c91-92f7-42dd-b3ad-a3072c1c1d24",
+      "comment": "",
+      "command": "type",
+      "target": "name=engrave",
+      "targets": [
+        ["name=engrave", "name"],
+        ["css=.pt-0", "css:finder"],
+        ["xpath=//input[@name='engrave']", "xpath:attributes"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "nanda test"
+    }, {
+      "id": "23d3a312-7263-46b4-93cf-9a9c59edc187",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Save Customization')]",
+      "targets": [
+        ["css=.mb-2 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//div[10]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save Customization')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4bbc74f9-3b9d-4228-b6b7-fef59f65da73",
+      "comment": "",
+      "command": "waitForText",
+      "target": "//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "c92ab4b2-0472-42b9-bdf6-a455cb2b16ec",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.d-none .i", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "94e6c830-e092-414c-8cee-cc7e7f9bd995",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Edit Engrave",
+      "targets": [
+        ["linkText=Edit Engrave", "linkText"],
+        ["css=.cart-engrave-link-edit", "css:finder"],
+        ["xpath=//a[contains(text(),'Edit Engrave')]", "xpath:link"],
+        ["xpath=//a[@onclick='openEngrave(this);']", "xpath:attributes"],
+        ["xpath=//div[2]/div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Edit Engrave')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7cc54fea-f5b6-47a5-a4bd-52d491e82be8",
+      "comment": "",
+      "command": "type",
+      "target": "name=engrave",
+      "targets": [
+        ["name=engrave", "name"],
+        ["css=.pt-0", "css:finder"],
+        ["xpath=//input[@name='engrave']", "xpath:attributes"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "nanda1 2"
+    }, {
+      "id": "1206de18-4551-45e0-8b83-783a7c469fa8",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Save Customization')]",
+      "targets": [
+        ["css=.mb-2 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//div[10]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save Customization')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "600171a4-21f5-4787-a7dc-6f9e424004c3",
+      "comment": "",
+      "command": "waitForText",
+      "target": "//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully engraved']",
+      "targets": [],
+      "value": "Product successfully engraved"
+    }, {
+      "id": "eaf529e6-3724-4619-94cf-3428f46fc0b3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.d-none .i", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b392f81c-0c8b-454b-98b2-7d2b0025d76c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Checkout')]",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-primary:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://hintofyou.playbybeautyhaul.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[18]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "adf59bb1-5280-41eb-97d1-abfef2ff5b54",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "952ee7cc-fe1b-48e0-9137-ab04aadb1d04",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66347b2c-a637-456f-a088-7928ef96b46d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "503af92f-eeb5-44ba-a448-e9d109755363",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [
+        ["css=.col-6 > .btn", "css:finder"],
+        ["xpath=//div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Next Step')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "40c9af61-3781-4d08-90f8-8fc33929bdd4",
+      "comment": "",
+      "command": "runScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3572774c-4125-4949-a575-3cfc1d058271",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b31559c1-760f-43d2-a999-ca0a38933858",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f49726bf-2198-47d4-8a9c-b09fdffb1403",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'JNE')]",
+      "targets": [
+        ["css=.card-body-payment:nth-child(2) .col-auto:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div[2]/div/label/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1d8858c-5b5c-4a40-9783-35c4b3041702",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["css=.col-6 > .btn", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Next Step')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6484621c-bfda-43ea-82f4-7d5abf03794d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Place Order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf96a215-addb-495b-a6f1-411228f9b34f",
+      "comment": "",
+      "command": "runScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f1aeb185-0381-4715-95ad-bbac21d48d47",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7be5aa42-672f-4522-9122-eb666b258e22",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "ac47f56b-0da6-45f4-bc81-727d6bc374be",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "79ae959f-0bed-4ae0-9077-548be34a6b43",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54e4e14e-9b8a-4346-aea3-6b128e73a630",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "26cff72e-00c3-4c91-a3eb-f07948ee6346",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "Complete Your Payment"
+    }, {
+      "id": "b7954d46-9c74-463f-8674-88e7b769ad7f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.cart-engrave-letter",
+      "targets": [],
+      "value": "Engraved letter \"nanda1 2\""
+    }, {
+      "id": "fb9bd74e-e7ea-40d5-a7cb-9828fbffeb17",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "abbdb9e8-99ba-4cf4-b8f7-09adbf1abce5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-icon-login",
+      "targets": [
+        ["css=.btn-icon-login", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//li[2]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a885835-8016-49d1-9d09-1c226ef2fdc5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//a[@class='glink2'])[contains(text(),'Order ID :')][1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d976ff8b-bd5d-4a64-b383-9212ed0b10e3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.cart-engrave-letter",
+      "targets": [],
+      "value": "Engraved letter \"nanda1 2\""
+    }]
+  }, {
+    "id": "469cc0e1-2b02-48fa-ace5-698d14bd9341",
+    "name": "Add to cart product without engrave WHEN engraving is ON",
+    "commands": [{
+      "id": "e9b87be7-5308-4835-9e11-347882774b11",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a55a2cc5-4b08-4d35-93a3-84d69eae54b9",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba1efea5-dfc0-40c3-80de-12205c63b349",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "7011b88b-958a-4c09-a105-3a5db5ad299f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bea4388-db5d-4282-807c-bb681607a7a6",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[3]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Engrave Now')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6af17f7-9497-4203-b086-b169bb4252b1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Save Customization')]",
+      "targets": [
+        ["css=.mb-2 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//div[10]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save Customization')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d881ac00-c147-44df-97f0-81600258b851",
+      "comment": "",
+      "command": "waitForText",
+      "target": "//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "bc48795b-892c-4be7-8450-06c27c6a3a55",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.d-none .i", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed84fd0c-4194-4cdf-81b5-9e559669c187",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Checkout')]",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-primary:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://hintofyou.playbybeautyhaul.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[18]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2aea3a4a-0711-4ad6-8bd0-7543f27e8c5a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a3f7ab8-0a65-4f57-ba18-9b071c32a15a",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ecb43e49-9b15-4971-9d5d-864a3aa2441d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9dcdddb4-a9f8-4ea3-91aa-16b38d3161ee",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4ced449-ab1b-4e73-991e-47bb0636a975",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c927d6e-3bf3-4692-836f-e38d7f10084d",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "511a9d42-4bb7-4d38-a5ca-c243c0058f8a",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "cb9cef2d-89a8-447c-a6a4-f92b3d203d68",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'JNE')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa6dbfe7-6e3b-4faa-b55e-55482cfe3718",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e20af59e-f3e7-4749-8efc-17f040b1b508",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f21ff0bc-3066-4661-b2cd-00d02931271c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e27262aa-8412-42ed-8eb7-e0c08e270943",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "557921b1-3231-470a-9c85-2082c2d9bf86",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "7a6a61ea-f9ae-4bef-8d8d-fb1b5ccb8125",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9593645c-a531-42f5-a436-529932dbcc25",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8537a81f-840b-4741-9f68-ffa11144a2c1",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "cfc38d8e-cced-45f9-be7f-710b88100faf",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "Complete Your Payment"
+    }, {
+      "id": "f7ab79e2-9d2e-475a-8856-224b6825e720",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.cart-engrave-letter",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "8a11cd11-3688-4b68-9133-8889dd7b9270",
+    "name": "Add to cart product without engrave WHEN engraving is OFF",
+    "commands": [{
+      "id": "2ea8c746-82a5-418e-a1b6-2a1058166816",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "418eb481-cdc8-4920-bc87-1cbdd6258e8e",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9f95cdfe-7306-4e35-b0ad-8af28f3e981b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Add to Bag')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9a58f93d-65f9-46ec-a2b3-e4b60d196efc",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(text(),'Add to Bag')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42109016-577d-45b1-995e-ff12f28a88f8",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Add to Bag')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74345780-1b6f-4c6f-a9eb-45b15675ca80",
+      "comment": "",
+      "command": "waitForText",
+      "target": "//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "97b97b1d-74e9-49f2-916c-1fbd2b018bc7",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.d-none .i", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "de824c7a-665e-4a01-89bf-5de4e7f0dbea",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Checkout')]",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-primary:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://hintofyou.playbybeautyhaul.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[18]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "76ddcb2e-6fa9-49f3-b193-eb942d816e5c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95a1b90c-ae2f-47a5-8141-9d696d877b48",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec076c60-9918-43d7-90d4-8d84df8b7ec1",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "ce7b0ddc-c55d-42c6-b7d9-79747c576982",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bb0db4c5-2942-48e0-8f3a-78d9e8203ef2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91785ec7-b2d5-4e6b-be0d-7a937e58e413",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b29c4c60-7257-4474-93a2-ffa491240387",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "812b902f-807d-49c3-81d0-95f6c9422be1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'JNE')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf238b86-9b1b-4757-8983-f05beae72b47",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "45d67dd5-e24f-4a9d-94a0-bcf574d2029a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Next Step')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60ce1014-b1a7-4623-89da-1a6830791d3c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1862e173-2ee7-4041-ab25-5ba8509c79e9",
+      "comment": "",
+      "command": "echo",
+      "target": "The page is fully loaded",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85dc3bb4-92c6-4d14-b8a3-047a61f92f25",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mt-1.text-step.active",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f3d8d44d-e143-4634-b318-c6437dea2db2",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "6fa672ba-e122-40a8-b25a-53f6bab8501d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Place Order')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42230732-ceb6-4fe1-a413-a48b5ec8fd36",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "4055b9fb-2792-4a0b-a5e7-05eae99aa97e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "Complete Your Payment"
+    }, {
+      "id": "72e65550-51ae-417f-9779-cc151cbcb8f2",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.cart-engrave-letter",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d90ceed3-9954-4a68-a5da-fd52a4d7592b",
+    "name": "Hide engraving button IF product is eligible to engrave but out of stock",
+    "commands": [{
+      "id": "7df91d82-b135-474b-a8c9-a51130f63c35",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd96dfb7-a66c-425e-8cc3-73448924c906",
+      "comment": "",
+      "command": "open",
+      "target": "product/detail/sanity-2415",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fedb1226-da57-42e3-9a38-62925a977307",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.oos-text",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "5a06447c-ff66-4411-a9f9-9946c113b195",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.oos-text",
+      "targets": [],
+      "value": "SOLD OUT! NOTIFY ME WHEN RESTOCK"
+    }, {
+      "id": "f7e30b13-788b-4cee-821d-cd3d227d9153",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "linkText=Add Engrave",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "51bbc1fd-1bb8-45df-8017-07f32abf5cb1",
+    "name": "Engrave",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e67914bf-04c3-4df7-96ca-2ce1572b340b", "1dfe927c-f015-46a8-91ad-0dd5d21d8d99", "8137f401-c35b-47e7-893c-021128506046", "00be5a57-184c-489b-ac65-50a5340d5149", "82575c9b-863b-49c4-8f7b-6d88f82a01ee"]
+  }],
+  "urls": ["https://hintofyou.playbybeautyhaul.com/en/product/detail/single-sanity1", "https://hintofyou.playbybeautyhaul.com/en"],
+  "plugins": []
+}

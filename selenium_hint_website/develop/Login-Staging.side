@@ -1,0 +1,430 @@
+{
+  "id": "fae6dd14-f4cc-4a81-9a8b-acbb196e08a6",
+  "version": "2.0",
+  "name": "Login-Staging",
+  "url": "https://hintofyou.playbybeautyhaul.com/en/",
+  "tests": [{
+    "id": "06b1965b-7c34-4c37-a3a3-2d3c8ba4a8b2",
+    "name": "TL01_Sign In account",
+    "commands": [{
+      "id": "45323fe7-7554-4b06-bcfb-d4236e0b4761",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c459bb2-f993-4ff1-96c7-754bfebf2475",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x901",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68036a41-c9b2-4898-a604-ff8725340396",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc536629-50e1-4a28-aaff-3df3d94981fb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-account']//button[@type='button']",
+      "targets": [
+        ["css=.nav-menu-account .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//li[2]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "56fbb02e-6f4b-4219-8623-c42e85e01474",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "cfc2c768-3be4-480f-b9fc-d2166e571818",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [],
+      "value": "shabrina.shabrina@beautyhaul.com"
+    }, {
+      "id": "9c87227d-9c3c-404b-a1dc-73c87d4c54cd",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.mb-3 > .form-control", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "abc123"
+    }, {
+      "id": "be4f2be1-edfb-40a8-866f-c861ecc61c51",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Login'])",
+      "targets": [
+        ["css=.mb-2 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[7]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb5562c5-442c-436f-8540-a1a83f2bef38",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "0874a21e-f2b3-412e-98c8-158b5072c17d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1dcd9cde-2727-4852-9532-cf6a26009db1",
+    "name": "TL02_Sign In when all fields are empty",
+    "commands": [{
+      "id": "022334b2-067b-4ae6-b215-510e07bf5bd7",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc3a9e4c-a465-48b2-9c0e-1540803fb9e7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d2ed1ad6-8b5e-4d71-8955-6c28f067259e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "519067e8-3ee8-4453-9696-987da662e611",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-account']//button[@type='button']",
+      "targets": [
+        ["css=.nav-menu-account .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//li[2]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f885768-26bb-46ac-ac32-36945022c847",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "53eb9bc9-3953-4e5e-8f1a-a195038b2644",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Login'])",
+      "targets": [
+        ["css=.mb-2 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[7]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d63998ac-3d97-439a-8d7d-968bd84686aa",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mb-2 > .form-error p",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "10713e99-0564-451a-af0f-530eb6804edc",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.mb-2 > .form-error p",
+      "targets": [],
+      "value": "Required field."
+    }, {
+      "id": "d6a36fab-4b82-48a1-b7d3-39a16fe93f63",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.mb-3 > .form-error p",
+      "targets": [],
+      "value": "Required field."
+    }]
+  }, {
+    "id": "d50f4713-42ad-4bcc-b55b-54292c80af60",
+    "name": "TL03_Sign In with invalid email and password",
+    "commands": [{
+      "id": "2ab90c12-51af-4f93-b56d-e8787064e87a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa78088e-7287-40e1-b4cd-df0969f1e5dd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c4d07b59-56eb-4c5d-aeb3-4644d4f8f21f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3a630c4e-1bab-4515-be49-73e86c8f49d0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-account']//button[@type='button']",
+      "targets": [
+        ["css=.nav-menu-account .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//li[2]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2efc0115-fcc9-444e-b8ae-8161fe06fe16",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "ffd92503-6230-4f23-a58e-e1f27e43058a",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [],
+      "value": "firda.aviola.beautyhaul.com"
+    }, {
+      "id": "2013af3d-0fa4-492a-8cfd-c7556c92ea3e",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [],
+      "value": "abc456"
+    }, {
+      "id": "82b2e20c-ac40-4f0c-8c8c-812cd45bcccd",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Login'])",
+      "targets": [
+        ["css=.mb-2 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[7]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "500af062-7e3e-4463-aade-743db6ee8d0b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "95f55ed9-a095-4824-84dc-88ac22c66f1c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "Invalid email address."
+    }]
+  }, {
+    "id": "359e0b7c-705d-49e9-bfc2-71feab7fe5f1",
+    "name": "TL04_Sign In with valid email and invalid password",
+    "commands": [{
+      "id": "12024d5a-db0d-4326-8710-073dffce2a4f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5dede641-c0e4-44f7-92b6-d038f2e72a06",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fca11140-651f-4ed1-81df-5ef8135a7130",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "da8ccdfb-fb02-4878-b72a-d3899df401fd",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-account']//button[@type='button']",
+      "targets": [
+        ["css=.nav-menu-account .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//li[2]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "419ee233-b807-4776-94a0-32779c3c3c15",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "d62db9d7-19e6-4809-980a-bfd7f53d1cc0",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [],
+      "value": "shabrina.shabrina@beautyhaul.com"
+    }, {
+      "id": "bc1549ef-1079-4a8b-99c5-d4e603bc6bff",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [],
+      "value": "abc456"
+    }, {
+      "id": "739407c6-8442-4236-977a-5263c8f15b47",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Login'])",
+      "targets": [
+        ["css=.mb-2 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[7]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ee0337d-aaaf-41f4-ab24-ce810cf82247",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "51dc4f05-98e8-4183-b755-c929dfbfadd3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "Invalid email address / password."
+    }]
+  }, {
+    "id": "3abf4d84-bdda-4ba6-8ed6-2cfa4ce84e2c",
+    "name": "TL05_Sign In with unregistered account",
+    "commands": [{
+      "id": "33c4c92f-648b-4662-b9ad-aadb5e035ec6",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e3e5d68-96b1-41d4-abd5-ee64fcdea68b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6a91ae5-f864-4c00-b00f-1c6a39328c62",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c579b59-978e-4f02-8135-803fd45691d0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-account']//button[@type='button']",
+      "targets": [
+        ["css=.nav-menu-account .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//li[2]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8afe87aa-35a4-458c-9807-cd81ae2abc88",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "5128f7ae-3091-436e-adc9-4154ef8dc6c0",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [],
+      "value": "firda.aviolaaaaa1122@beautyhaul.com"
+    }, {
+      "id": "776d14b7-b835-4f99-884a-540c007835bf",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [],
+      "value": "abc456"
+    }, {
+      "id": "7f3ccbde-8fc6-440d-9c12-b5766c0afe57",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Login'])",
+      "targets": [
+        ["css=.mb-2 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[7]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "94d2a007-469e-4c88-99a9-9d28f9d00732",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "7499e857-54d0-4c36-b40c-feaba9e6afe4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "This email is not registered yet."
+    }]
+  }],
+  "suites": [{
+    "id": "063e78b6-60cf-46be-9802-257847e5adb5",
+    "name": "Sign-in",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["06b1965b-7c34-4c37-a3a3-2d3c8ba4a8b2", "1dcd9cde-2727-4852-9532-cf6a26009db1", "d50f4713-42ad-4bcc-b55b-54292c80af60", "359e0b7c-705d-49e9-bfc2-71feab7fe5f1", "3abf4d84-bdda-4ba6-8ed6-2cfa4ce84e2c"]
+  }],
+  "urls": ["https://www.playbysomethinc.com/en/"],
+  "plugins": []
+}

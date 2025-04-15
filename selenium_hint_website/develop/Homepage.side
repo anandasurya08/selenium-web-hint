@@ -1,0 +1,261 @@
+{
+  "id": "612f2a03-62ca-41ef-935a-4d8b5ee122c5",
+  "version": "2.0",
+  "name": "Homepage",
+  "url": "https://hintofyou.playbybeautyhaul.com/en",
+  "tests": [{
+    "id": "9b3df183-bfc0-4089-ad22-cc54938940fb",
+    "name": "Search product",
+    "commands": [{
+      "id": "439be288-01ab-4dad-a8f9-bdc205549e95",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b896039-aa09-4c89-9429-caca607f0019",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "249ff53a-7140-4c8b-8a22-7c6cd3dc4a0c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3edf532f-efc3-4ae7-9b70-4444b6cef811",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-search-icon']//button[@type='button']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f642c517-df35-4478-99bd-de8d9d5bd52d",
+      "comment": "",
+      "command": "type",
+      "target": "name=keyword",
+      "targets": [],
+      "value": "single sanity1"
+    }, {
+      "id": "b65bf2c9-6069-41d0-babe-3bd1c9ca2682",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//div[normalize-space()='single sanity1']",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "51b36a7e-67d1-449a-9d60-fb4631546299",
+    "name": "Show result in search bar when products found",
+    "commands": [{
+      "id": "b7ff7f67-fcc0-4469-b5f6-5584cb4c58ab",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c01134ac-b0a0-4ce5-839f-c867d9d52d68",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba77a7b2-3b8d-435e-aaba-c4a16ae2acec",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96d668f4-ef54-4ad9-bc58-71b74dad98b3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-search-icon']//button[@type='button']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09825632-1d63-4ac8-8b61-e811cc219717",
+      "comment": "",
+      "command": "type",
+      "target": "name=keyword",
+      "targets": [],
+      "value": "single sanity1"
+    }, {
+      "id": "14ae74de-9eaf-420b-a79d-945890a589f6",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//div[normalize-space()='single sanity1']",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "d87d3154-2c56-4d56-93a0-8b4c36cb6187",
+    "name": "Show info \"no result for\" in search bar when product not found",
+    "commands": [{
+      "id": "37dbac76-1a7c-40df-8ea3-0013446096d6",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "005bdd7d-7785-44ea-ad8d-e6ad67ddc6f9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69004510-ef40-4c71-9b8a-c227ebeb0f7a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c3f1f1d-c063-4608-bea7-361e87ede28d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-search-icon']//button[@type='button']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66703f5c-7ae6-47ea-8c19-04558f06d2fc",
+      "comment": "",
+      "command": "type",
+      "target": "name=keyword",
+      "targets": [],
+      "value": "xzxzxzx"
+    }, {
+      "id": "6c260ec7-6ea1-4f2d-9922-7c82284dc42f",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//div[@class='text-search bold']",
+      "targets": [],
+      "value": "No Result for \"xzxzxzx\""
+    }]
+  }, {
+    "id": "0af95904-8555-455d-98ae-84724b034fc2",
+    "name": "Remove search keyword",
+    "commands": [{
+      "id": "c849df23-bf65-4d3b-b979-d731e1ad9938",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75c752c2-530d-4033-a505-fe7ee1a34300",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5f0f80e3-d8cd-4351-8087-840cedede679",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d2873a9-4c4e-46c3-9813-2ee175fb29d4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-search-icon']//button[@type='button']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4b6c62f-55ff-43e9-8531-90bf11e8e8a5",
+      "comment": "",
+      "command": "type",
+      "target": "name=keyword",
+      "targets": [],
+      "value": "single sanity1"
+    }, {
+      "id": "91d7ae2b-96d2-4246-9dd3-a084bcfdae4c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='clear-search']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4487b00-87ed-4e8b-a62d-8d7f9bbe2de3",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "xpath=//div[normalize-space()='single sanity1']",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "116490ea-72a3-4f8d-9051-10d4272452eb",
+    "name": "Close search bar",
+    "commands": [{
+      "id": "d67d00cb-6f5a-4e5f-bb4a-667f97cd064e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3b9ed335-37b8-4a53-8263-e8d0b44de687",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "41b58d20-b02a-4679-8f52-d844d2e41797",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf172b2f-d9b7-4ff0-b4c9-f5b4d9216f98",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-search-icon']//button[@type='button']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aa490897-0c2f-4bbc-87a7-5347d668eb3f",
+      "comment": "",
+      "command": "type",
+      "target": "name=keyword",
+      "targets": [],
+      "value": "single sanity1"
+    }, {
+      "id": "e4f92431-26fe-4d0e-a506-98200f4da18e",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//div[normalize-space()='single sanity1']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "11533a1f-eecd-4154-9c4b-5944f91471c5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Close']",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "678913f1-e051-4a6f-9fed-88db6f0cef91",
+    "name": "Homepage",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9b3df183-bfc0-4089-ad22-cc54938940fb", "116490ea-72a3-4f8d-9051-10d4272452eb", "0af95904-8555-455d-98ae-84724b034fc2", "d87d3154-2c56-4d56-93a0-8b4c36cb6187", "51b36a7e-67d1-449a-9d60-fb4631546299"]
+  }],
+  "urls": [],
+  "plugins": []
+}

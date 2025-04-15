@@ -1,0 +1,3671 @@
+{
+  "id": "48904f72-f331-49de-986c-b8d7593616d9",
+  "version": "2.0",
+  "name": "Voucher-Code",
+  "url": "https://hintofyou.playbybeautyhaul.com/en",
+  "tests": [{
+    "id": "06b1965b-7c34-4c37-a3a3-2d3c8ba4a8b2",
+    "name": "01_Sign In account",
+    "commands": [{
+      "id": "45323fe7-7554-4b06-bcfb-d4236e0b4761",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c459bb2-f993-4ff1-96c7-754bfebf2475",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68036a41-c9b2-4898-a604-ff8725340396",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc536629-50e1-4a28-aaff-3df3d94981fb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-account']//button[@type='button']",
+      "targets": [
+        ["css=.nav-menu-account .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//li[2]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cfc2c768-3be4-480f-b9fc-d2166e571818",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [],
+      "value": "ananda.surya@beautyhaul.com"
+    }, {
+      "id": "9c87227d-9c3c-404b-a1dc-73c87d4c54cd",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.mb-3 > .form-control", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "testingBHI123"
+    }, {
+      "id": "be4f2be1-edfb-40a8-866f-c861ecc61c51",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Login'])",
+      "targets": [
+        ["css=.mb-2 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[7]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb5562c5-442c-436f-8540-a1a83f2bef38",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "0874a21e-f2b3-412e-98c8-158b5072c17d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b149be71-a301-4ac9-b067-ca01ac1ffdc8",
+    "name": "VC01_Apply voucher without minimal purchase",
+    "commands": [{
+      "id": "cf73d7cc-b226-41be-8efe-e228b8c119a0",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05ee5979-cbaf-47f4-b29f-154850ea6e22",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/bundle-variant-snty2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a285398-9793-4a9b-9557-4806b4b4188b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0abf3fa-1e2c-4778-b719-dabd5629e09b",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "251b7426-beab-48d1-b052-e4bed239fc28",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4740a8ca-8000-4801-b639-706f271e65ac",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "50bc7eda-1273-4d22-a91b-5ad02652d969",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "95ab2e2c-33e3-4cee-b8d8-610bc75e1402",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "30c3e9b0-c0b3-41f1-9d4b-2a130190afa7",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "71e921ea-c2a1-4627-898a-eea8dfce41ae",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "63a18671-db07-4e5f-b978-545a71ba5343",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "80d429dd-d24f-4c5b-9b22-9937320b79fc",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "773c5870-80ea-4e1d-8d9d-b5cd292e1f55",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0d55c1d-ee78-41b7-be6b-ea55f102ee82",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "27d58927-bb53-40b4-a79a-a1f0906f88e2",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "5ee2c318-066f-4100-8caa-37fbc6f9b116",
+      "comment": "",
+      "command": "type",
+      "target": "name=voucher",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "auto-allorder"
+    }, {
+      "id": "ee8c7b8e-1488-4c5a-90c4-af24ad08785f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Apply']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "271662b7-9798-4f50-bd4f-b8f1ba554e54",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c01d59a-103d-427f-b70b-d9643a277e7b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Remove']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d895fcf-1519-4335-9593-9b5e246f6b39",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }, {
+      "id": "02f45632-2b09-4ae5-b2c9-f5f87834ca81",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a180c236-a35f-45cb-be78-98d8cad922ea",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52a47301-23e4-4338-b913-85d90c7ae91b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "093a9920-b3e8-419e-a68e-29cfa4edc47a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "27c6f0ca-3cbd-4cd3-9445-b7f9ea2bc575",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.ship-summary",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "b8e0bcf3-2594-4684-80fc-0dc341cf3ded",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Place Order'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff0c42e6-43cc-41ab-8db7-e36f3077b57b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3202d1ae-585d-43fe-9d3b-34af11c014cc",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "998677a4-b3ca-4d47-a82c-7688e89a7346",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }, {
+      "id": "fc025834-fc48-4ac4-8f9a-ea77563fa4a0",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }]
+  }, {
+    "id": "184a7fd6-4819-43af-af58-3e9db22d3aaa",
+    "name": "VC02_Apply voucher with product purpose",
+    "commands": [{
+      "id": "fe39104f-c39a-48f9-83b4-ed2d237c74aa",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa44ec6e-92a5-4510-a37f-f1b2fcc8f997",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "888c9df6-b277-4e5e-b63d-5633326c6a19",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f03c55f-3693-4cbe-9931-04c8b27aafe3",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "e035a699-4180-4b2d-986d-20e909f6dfaa",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "08e687e1-629f-4527-9e2b-5cf4fca66c8d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6482be39-991b-4026-ba75-c63f7f522a60",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "27f7acbb-4fa0-4157-9432-159333a58395",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6476d3a1-2b09-4bc4-8795-61d93ac6208b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "761cf0e0-abe8-490c-985e-b3bcf86fd0ad",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "de703a0f-5c88-4df9-95e6-0f9fc9b899c3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b498d1d2-0444-45b6-ab36-25e71fabff8c",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "c77a538e-a701-4056-a321-178c8174579b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c372450-a01a-4b98-9835-2d27ab3ebbf2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51f89bca-2e5b-4ac0-8cdd-07f08cd37577",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "e09d35d8-d3b2-4035-945b-e647952015c4",
+      "comment": "",
+      "command": "type",
+      "target": "name=voucher",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "auto-product"
+    }, {
+      "id": "a46895b6-f100-46f2-92fc-bc736da6c344",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Apply']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "823493db-c061-44ba-b273-3adeb3039daf",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "456623ce-4d92-4492-8b65-ce1d7ac34428",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Remove']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b66cd3da-66c4-4b0d-b394-3b80854117cb",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }, {
+      "id": "b2f5aaaa-7152-4a33-8382-0c35a16f9426",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be456847-b0a7-4eb7-a2b0-0fa451049d87",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "44d186a8-efeb-4ba1-9ea3-fbf45cb4b6f0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4207982-98b7-4042-bc05-fe01b98c78fa",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "242537d1-bef1-4451-9820-8fcfb376f6d5",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.ship-summary",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "cbb4ce4f-0cd2-4fc7-9734-0862cd49d81c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Place Order'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "07f15d90-0bd6-403d-b05e-2cc44f1b5ab6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4bab10fc-8d2d-4649-86f1-414de37e718c",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "15441bb1-4cb9-45f3-b4ce-cdbf47d6a59f",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }, {
+      "id": "cdc3fe19-9af0-4018-9e5b-9321e1d12680",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }]
+  }, {
+    "id": "7491150e-bad0-4161-a158-178852fe054c",
+    "name": "VC03_Apply voucher with collection purpose",
+    "commands": [{
+      "id": "be922bee-bcc3-414c-ad6e-686d2b19b8a8",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e781d6e-ac27-4358-8985-3d62998f63a6",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/bundle-variant-snty1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ac6f779-a665-4661-8ecd-e338978e9b31",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51120573-2e96-4e0a-afc0-180cd14b487e",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "fa5acde9-e8e6-4b63-9beb-0b2da3175c61",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7796aa59-eb2c-4ee1-bfae-f53703ee783e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b82b8cb-3dff-43e7-b288-d7dd0cf4af6d",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "e3a98e97-8b2f-496c-ba5e-54774089b00d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3a592c8-d5f0-4aa9-95d8-0f680b976d29",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8467cc7f-f4af-4e68-ae4a-20bc9d558b26",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e8b44ec-9b6b-4b8e-a65f-7cb998575118",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ea361979-a780-4903-b75b-f5f1f3764685",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "99402ab5-eb91-4bb2-a417-cf01e10e0f79",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd512d49-b0a4-47a9-a029-4f910c4be76d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c14c936-52ea-4712-aba2-6e8e4258724f",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9a08557e-5907-4772-a5f8-df2e7771fb9d",
+      "comment": "",
+      "command": "type",
+      "target": "name=voucher",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "auto-collection"
+    }, {
+      "id": "529e1f8f-c9ee-4006-968e-e9a040066605",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Apply']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bc91c276-4de0-4faf-a14c-17d79254a22b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e57f6b2e-c25b-4c1d-8074-f75897463810",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Remove']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "674ae4c7-a1fb-47d0-b71a-a04f83dcd113",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }, {
+      "id": "f0e9d86f-3bea-48b9-ac5a-e14ea827c3be",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "484a28fc-6987-40a5-817f-e50f30de1f69",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ac5d076-060c-4844-8c87-e9cc264f2225",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "65904746-45ac-44f9-aa08-a3dbb8424d37",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7cae9d0-5da6-4407-9036-f1e1732eba25",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.ship-summary",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "b0717691-f425-40da-8628-6990d233943a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Place Order'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c003d416-68b3-47d3-85fe-31d6a18fb61a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f1a78823-b9e9-4d2e-8720-9f15273f3893",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9bada59c-c562-45de-be5e-9b1ba9483d7c",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }, {
+      "id": "135ca42e-84e4-4d85-89d4-0c4438b9186b",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }]
+  }, {
+    "id": "a77c9fe5-3f9a-45a8-b34d-d115c7c550f9",
+    "name": "Apply voucher when total > minimum purchase voucher",
+    "commands": [{
+      "id": "8beb2416-eed8-4c73-a4a7-5dac34493215",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9404b4f8-e946-4c66-b9da-c41f13bb5abf",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3106c7e6-2927-450c-a0bb-cdc1cb445745",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "797ce750-949e-4302-8230-4b843db26b52",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "cb3ee4bb-4685-4681-85fc-cec5c954d8f1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "504dc8bc-f3af-4e68-be74-9de1cf7de746",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "50bd1c20-c0b1-467c-b520-e6aa8f3ae3d6",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "3db9cf99-3288-43fa-9dd4-343aafb07a66",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cea76e81-d807-42a8-92fe-f273f62b1f12",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6901543e-387a-4554-ac4f-3b3a3af7e420",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce60e23f-d186-477b-864e-e5ca174b57c2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "638452b0-4481-4e92-8905-1dda417ba103",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "5be2ced3-8ba0-4000-a9de-1852ac5f4d97",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3be86602-5617-45d3-b3bc-1ae1d48f3bff",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d322e9f8-f537-4c91-895d-4cd6f3c1a130",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "8ca73c0a-5b94-453d-946e-e9473c3d7dba",
+      "comment": "",
+      "command": "type",
+      "target": "name=voucher",
+      "targets": [],
+      "value": "voucherbesar"
+    }, {
+      "id": "a791cc66-927b-4255-a3b8-425661d2b717",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Apply']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8d78595-f741-4321-b05a-7ba661809f2e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1793d6bc-2086-4648-9561-d36fce645c4b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Remove']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff6a0e84-2dd6-4a17-89b7-fd0c1f0ec76f",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }, {
+      "id": "1e56d6e8-24d6-4fe5-92cd-6e9f0d1809f2",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57fa948b-930a-439f-8d09-96c7adf8ebfe",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b4483c8-034a-4de9-8ef0-d4b41ab8949d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3af3da8e-8c32-4796-82e9-bffd853ac5cb",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c397788a-3163-4e90-b596-1ed7a57a2013",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.ship-summary",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "603db1a6-9476-42a6-b8e3-1264d918c06a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Place Order'])",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0315600b-1306-4038-b867-c2fa171c5bfc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f68f11ea-a17a-4ba3-ad61-e30116ab15f9",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f2b42718-c56a-4c40-aa3f-a1a940d162ac",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }, {
+      "id": "12851791-1a05-4828-808e-39d9847a1847",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }]
+  }, {
+    "id": "d0386007-48e8-4287-9b3e-3079d20eea88",
+    "name": "Apply voucher when total = minimum purchase voucher",
+    "commands": [{
+      "id": "7cadec5b-410f-440a-b214-10c63860128c",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d069bf90-707a-4b84-aa84-0970347bcc2e",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "956760ea-494d-4136-9e8e-69a836f9b931",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6fc5ccfe-167d-4c82-aedd-8cb4cb75f743",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "4555e7dc-1e9b-4116-89ae-20898ccbaaf7",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5eea7a20-5d68-4529-9ee1-6731d150db9a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "932acff5-64cc-4d77-81a9-d34046a32888",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "32922c2c-bfe0-4c59-911a-1848ca9986d3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7ae4ec4-a4be-4d49-ac6e-e55a8b75f8e3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5a23452-58b6-4ecb-a277-d925c9e80efb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c4b48793-c73e-45f6-a2e6-7cb3a70df0c1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31d8e05e-9f4f-4617-9400-ec92fe0d94a0",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "05243b9c-5312-41a2-8be9-a79561b7928c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f70071f-db70-44d5-a9f7-00a91b1864e4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bd4ad89e-11a7-42b6-90ce-beb0b3e2deb0",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "0f7d24d9-f706-4ba7-b645-de0492d2d137",
+      "comment": "",
+      "command": "type",
+      "target": "name=voucher",
+      "targets": [],
+      "value": "vouchersama"
+    }, {
+      "id": "26d7158c-c9c2-47e9-952c-ea28de509e40",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Apply']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "161b3147-b0a3-4a23-a1d9-2bfcbd9519b2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5b7918ec-7795-4b8d-81cb-ad73305203e3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Remove']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85edc990-4f29-4cfc-90b9-a77d2f1f9ec2",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }, {
+      "id": "fd7819c3-5101-4cfd-b7ca-7799e125d55a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1cd1ce37-1712-4b8c-bed3-9ddd477b7ef0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "42c96ffb-aeb3-4401-b0e1-cc8fd5e2b09e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "460b430b-754c-4d23-8ee3-a017c8a84566",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f902af05-9c91-48cb-ac1b-30be4c1b7fca",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.ship-summary",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f90f763d-1fc7-45c1-8063-70546f3dc897",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Place Order'])",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a376f30c-4f5f-45a1-bf4a-29628695dcc0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f364a9c-bbbf-4642-b236-8d6569695b4f",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "e0efa001-2056-4135-8c64-793d0c2d4673",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }, {
+      "id": "a9a03e94-c888-4c62-9fa1-9f17dc4922e9",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }]
+  }, {
+    "id": "9a060ba3-5740-436c-b4ef-6d5319f8063e",
+    "name": "Apply invalid terms and condition voucher code (not eligible product)",
+    "commands": [{
+      "id": "46ba325e-49df-4ef9-a338-cd70b822b812",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "871442dc-7d85-472f-8fd7-1c55d6a6bdaf",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/testing-single-snty",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5c554f9-8a42-465a-b0a8-a1934170e779",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0c0263d-df6e-4bf5-abc0-6f4de88ce783",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "8b35cc11-0cdc-4f7a-971b-298e8f511d45",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "742ac5a0-bade-4cfe-9b77-fa3854974d5f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "32d59b8c-c4e6-4996-bc6e-020f2f4501d6",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "44db0d2a-4ffe-494c-8dd2-e18b0df39a0e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ae72bb6-386d-4ef3-9a55-420f965bcd10",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fce6ba4c-b9a5-4762-8802-9cb640c58f52",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "199ae13a-b6e2-46e5-b16e-12836ae06067",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9549eb06-b91e-4aa9-9e6d-d39b9db0204c",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "fd73c879-263b-4782-8ea3-957dee23c57b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "877527ea-abb9-4a4d-8924-69c8f3744d12",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dae0eabe-fcec-4daa-bd43-78a53a54dbe5",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "bf4f8163-83c7-4246-90c0-43c646ee91ab",
+      "comment": "",
+      "command": "type",
+      "target": "name=voucher",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "auto-product"
+    }, {
+      "id": "4927d45b-056f-4b63-bcc5-59793c8a52a4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Apply']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9cab88fd-467a-4d3e-b6b3-39ca0c50d122",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "c001dfdc-b121-4198-93ab-d1b97c979e56",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "Sorry! Requirements not match."
+    }]
+  }, {
+    "id": "3d9185a0-97a3-4dc3-a455-c279e1657907",
+    "name": "Apply invalid terms and condition voucher code (not eligible collection)",
+    "commands": [{
+      "id": "f19be25d-9f6a-4ba9-b74e-71ffe919dd58",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "33e2965d-66b6-4d25-bca5-e4b049a7f311",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity-2414",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0de066b5-df12-4158-9a48-1f4fd1e83dcf",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f645be62-afe1-4090-b893-d2f351b4fefc",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "92110002-d5fb-488f-89a1-c15fb8ae79e2",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3cad5825-82dd-454b-88ae-3c10c5929247",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97a416ee-f7ae-43c3-841c-e5e7e7a28178",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "f9aa3a0b-2edb-485b-9291-48fa83b4cba3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "93fffa26-80aa-4d1e-b1f5-5cd09c5cec29",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fcb201cb-f3e6-4d8b-8d66-66501b818b3f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4ccadf8-4bda-428b-8381-9f800d9185f8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6cf8eaa8-fa94-451a-acdb-27463dd970ac",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "2fd832c9-648a-4f3a-ab8c-3a00a045353d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "856fcca1-8c07-4db5-8865-8e6e7ea1012a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d18b212-6cd2-4111-8e76-64ba28da9b7b",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "e108d8dc-5001-41f6-8ff7-bbc551d05e0e",
+      "comment": "",
+      "command": "type",
+      "target": "name=voucher",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "auto-collection"
+    }, {
+      "id": "76eb7ef8-d8fc-4be5-8662-98826d7b3458",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Apply']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6150559-1b51-4c9c-8224-6cea41e4ecc5",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "a33226de-534a-4647-9f70-5d14f3e3d56c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "Sorry! Requirements not match."
+    }]
+  }, {
+    "id": "3e236b0d-0aa9-4ac3-8dfb-fca7f58541fc",
+    "name": "Apply invalid terms and condition voucher code (total < min purchase per product)",
+    "commands": [{
+      "id": "cedced9d-8672-46c5-a1be-98f7b4568b74",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "36b01e02-1d9b-4b19-817a-69e0f3af5060",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f5e6c865-4c4f-4953-a40a-1c635179db02",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e7e693b-7a42-4034-8a48-bedd77ce9f30",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "ff93442a-cd20-4356-9560-6c9aa0ed6f83",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60b11240-c740-4bb3-9fc1-3a11602c3872",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4a53afe-f681-414e-b976-089e8f6a87f5",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "9f6e8971-20fd-46b9-9378-f71c3df8bb6c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2187d5fe-b9e1-4cb8-8752-9381f51d130b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9cf1d4a4-04f6-4394-a16b-4ff36a08bbc6",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5208ee5-3e54-4327-b2bf-5c1313bafb80",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cbed1dd2-48a0-4e19-a8a9-efb2b7fa5f36",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9c3bfcb5-ddf5-4868-9f9a-617e8cacd0e8",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "19c0cae4-36aa-44a7-b23c-8b90581a7558",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d639f316-bd95-410a-ba16-d2341d8d9104",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "a809cd8f-3898-4644-88f5-cb180d8b294d",
+      "comment": "",
+      "command": "type",
+      "target": "name=voucher",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "minimalproduct"
+    }, {
+      "id": "a3ce62b0-89df-4a88-961e-9bd284dbbacb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Apply']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0704c90b-9863-446d-9b98-a80d51f95228",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "2ff1311a-4f52-4b51-8369-af5c6e93d7dc",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "Sorry! Requirements not match."
+    }]
+  }, {
+    "id": "d79f59c9-7710-42ec-8b4d-9a03c299c426",
+    "name": "Apply invalid terms and condition voucher code (total < min purchase per collection)",
+    "commands": [{
+      "id": "f20863f6-f090-4438-9262-c2d1863b2c07",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8da57adc-63ed-4803-a577-36b03a1d16f5",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/bundle-variant-snty1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c65517a3-4d92-4f9a-ad3e-ff6c2d17dfc6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ae35089-c8d4-4912-adb5-c64f49eaeb3e",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "5756dcec-5756-42c8-bee5-bd03f26b5f80",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "488f33da-b4f4-4d9b-b328-d0a12e018aea",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4788ea41-c750-4ff7-a5ea-b79ca1e75a4e",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "a982f79d-2b9f-4c99-876c-38b1a69918f3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "54d2aaf4-2936-4a4e-bdb9-8045c622e7b9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fde94228-f261-4532-8ae4-3c84f4ca4dd9",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "15088316-fba0-4230-bddb-3caa2bb5b343",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58bd13df-732d-4647-b048-8e16dbdca1a2",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "97517e54-e217-4df7-8e92-2fe6ea59e6b8",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e386087-8b25-4049-9546-ca310fd2bf40",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6be63d43-579f-4941-b028-dc451267cb24",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "473ef467-6cfd-4996-82fa-f1fb58cc80d4",
+      "comment": "",
+      "command": "type",
+      "target": "name=voucher",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "minimalcollection"
+    }, {
+      "id": "4cd5f47d-99fa-411f-b123-51f8249e7e24",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Apply']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d0bead77-7d0a-46ae-93ba-588fdeca4c71",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9635af31-7be9-4cda-a8fa-49081bf3e36c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "Sorry! Requirements not match."
+    }]
+  }, {
+    "id": "12f14960-79ac-42fd-882b-c5a5010a4429",
+    "name": "Apply invalid voucher code",
+    "commands": [{
+      "id": "2b2998ef-2262-432d-b20e-394b4fccad90",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03c61468-f438-41cb-be34-2000aa01e7e4",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a8c113ff-47cb-4626-9d01-20962c7651b3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5fae4bd6-ff9f-4057-b61c-28c70f8cdd8b",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f7615e21-b05e-41fd-aa67-63d4b1b31298",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7a0d0922-4ef2-4af4-999a-9a43659edf19",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bb34db97-1b6c-495f-9021-c164c43c900a",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "5f11dde4-43a1-4ea8-b5d7-d5e978559b28",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0303d4af-7f92-4d63-9ac1-e18112e27156",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f93a8df-fb22-40d1-97b1-e56669ce6816",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1830f8e8-2b86-4382-9319-1e709730198f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e09d17a2-8f98-4f7c-a519-ddc833a899f0",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "e8e0f901-63ff-4350-a51c-30337fd54bb1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "13911a4b-bed0-412b-806d-3580d53ff096",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "113f44e6-0d12-47ca-bcea-3e1f35be4bf0",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "aebcdfe4-928c-4e9f-8038-75f907246ce0",
+      "comment": "",
+      "command": "type",
+      "target": "name=voucher",
+      "targets": [],
+      "value": "test"
+    }, {
+      "id": "4be6cc0a-fc43-4df9-9fb8-b211ac13bc8d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Apply']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b79141f-c08c-481b-a5aa-f42412eef339",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e08d31c-8e67-4130-8aad-63ee78b5cd3d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "Invalid voucher code"
+    }, {
+      "id": "1525f7cc-e59d-4ecc-a004-f3b9fade2802",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }]
+  }, {
+    "id": "e9188a59-5d35-406e-b5a8-0dbfbdc32dea",
+    "name": "Remove voucher code",
+    "commands": [{
+      "id": "c7735573-8ec1-4176-8d18-14778ba2718d",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7e07809-a42b-4c29-8db6-62252e28ccd7",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "361f31e8-6a07-4ebd-a3fb-4d18c727a628",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "45c9d56a-8f34-46dd-8b49-265d5356bd75",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "cdaf9a05-4951-43e8-bfd4-c4461ebaaebd",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "11e94d3e-3fa4-4e01-b344-6910d6a1fe20",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "edb83b41-b3d7-4c8e-ba2c-8dec75e9df1d",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "cbc92d4c-91dc-4b13-a49f-825d6caef381",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7df96a94-a366-4e8d-8725-858180512b38",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09947ac4-6c2f-48bf-bdf9-e08e4ff1be3c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5666c80e-d443-4ae1-9414-83417f5102cf",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b1416ff-822a-4fe9-bc50-b7bb9e1ae34a",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "447b5fc8-c9ab-4945-8e68-cd855d8dc3f0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "79e311db-3a89-4d07-8021-3a02a7ce7223",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e90e25e-8195-4a58-8348-af3786bbd719",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "22ebb98b-8d8e-40e0-901a-66ae3bc74414",
+      "comment": "",
+      "command": "type",
+      "target": "name=voucher",
+      "targets": [],
+      "value": "voucherbesar"
+    }, {
+      "id": "24c8b104-5040-40c4-b592-e708c4eb5609",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Apply']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "208bed39-1cc0-4168-a27f-0429fdda482c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5cf05007-43b2-425d-b722-55888849a437",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Remove']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c56c4d8a-780d-41da-96fd-46d6cb8d9ee3",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }, {
+      "id": "aa4e32ef-45ed-4385-b829-61fc17058be5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Remove']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e393920-d138-42d8-8f19-2aad532a2d93",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "679c0586-58e7-4139-8ccc-d1f9cda8a69d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Apply']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "90b1fdb2-8603-468a-bdb0-0a71b3466126",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "Voucher code removed"
+    }, {
+      "id": "7cfb85a5-8543-4c9b-940a-a1a275fc152c",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }]
+  }, {
+    "id": "69eb2088-386e-4062-8714-d22ad7bec52a",
+    "name": "Apply voucher when total collection = min purchase per-collection",
+    "commands": [{
+      "id": "0f7aaef0-a50f-4d2a-adb2-56436fc69a01",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b03efff-b666-4d50-afaf-5093eb40dfe0",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b3b9c660-f770-42fe-ba17-4bd16833acc3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "165efa05-2054-40d3-8e4f-3478e3c7202e",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "6165fc5c-e60c-45c8-bf73-a3af2db68817",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b0c07f4e-17ed-4443-bef3-c3702139a448",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7fde2908-0c16-405f-8095-29f86d631158",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "56080a26-0887-4538-b3ff-6510ed1b59ea",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "39902c69-3b7d-48d5-8c2c-a8fb69c254d2",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "132c2117-1c33-4f3e-90f8-3acfb6c6e808",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1477b95-7428-4238-8767-7f6523d210fa",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31d57a8d-f8ec-4b7e-b399-186cd1923e7d",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "e7d1b534-fb50-4316-a8e1-9fdbdf4dce93",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a26c2d32-3fb2-4654-97e9-15ced7b25ac6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1906d0e2-060a-4625-9ccb-e4311d359572",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "ffa45df4-63c2-4e99-b848-d00e09ab855a",
+      "comment": "",
+      "command": "type",
+      "target": "name=voucher",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "samecollection"
+    }, {
+      "id": "01d26481-d0d7-4629-8d5f-afb98f37c21c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Apply']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f09cd260-3f73-4aef-853c-67f8aa27822c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e6b907f2-8da2-4a83-b83b-575b7bf2f881",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Remove']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d40c48e-663b-429e-9c05-5ee22421fc59",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }, {
+      "id": "c36e86e2-e0cf-4a1f-9760-4177d6b155c1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "517a3d52-0cd4-402b-a51e-9ad3b87e0ae5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "940fd670-c6da-4bfe-b858-de47950ef208",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "694f7fa0-4609-4e95-aec2-24774cab1372",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4cfb645f-4d44-45be-a3b9-7c4d976f3755",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.ship-summary",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "e1028e3e-4200-4600-aca9-4de000f87c8c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Place Order'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5d69d809-9f3b-4659-b43d-276a3b48d05a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d5bb9e58-d0c1-4a53-9495-0c33a3bd306a",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9ba906d4-2b7c-418a-a109-c5fd4b03b9c6",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }, {
+      "id": "a15247fb-6269-4550-bbc2-38ee3760a28a",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }]
+  }, {
+    "id": "46b3619a-a675-45dd-960e-ecaed8fb50b4",
+    "name": "Failed Apply voucher when total collection < min purchase per-collection",
+    "commands": [{
+      "id": "f1f39d84-276f-42e6-8244-33a12b1e603a",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c49e664-6f90-459c-949c-2b3578e394c5",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/bundle-variant-snty1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96034886-4f13-4915-b36b-ff61b4f16957",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3dfbf9a4-2328-47fd-90bc-9e2c6b35807e",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "c7b1d289-103e-44ac-9aab-007b90eb4567",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a48d389c-29d3-458e-9ebc-66a55f3dff85",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e25f3b4-2ded-4772-a00b-e0634cf2d8b3",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "c08969d0-2fd8-4842-b79d-49179a37298b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f85ee5a5-797e-4038-ac66-b457239342c0",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61535217-0e6f-492f-8dfe-4d2a23db5dbb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b698199-c025-41ff-975a-787de2db4a89",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d26e59b8-95e4-4c59-9b07-87761a36e197",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f25df7ea-96b9-4c31-8cfd-2b06eb04b3e2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3dacebcd-c8a1-4477-a8c1-9e99dc85d6f5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23dc068d-e3b8-4527-925b-4f990acaa6c9",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "21416809-d621-4799-803e-fc78646173f3",
+      "comment": "",
+      "command": "type",
+      "target": "name=voucher",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "minimalcollection"
+    }, {
+      "id": "af505d20-6b24-4f9b-a14b-cc9d64cc18f8",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Apply']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e50c2e52-af41-4b99-87ea-cba58a5ab67d",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "ec85926e-7761-4876-83e2-db36ed87da3f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "Sorry! Requirements not match."
+    }]
+  }, {
+    "id": "d80e842d-f929-4db5-90b2-ff240b6bc1d9",
+    "name": "Apply voucher when total < minimum purchase voucher",
+    "commands": [{
+      "id": "f68c8235-84fb-491b-a5d0-78ce36aa6f45",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "67a6e1ff-6af1-46b4-9459-e70b2b6bd3ea",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e133d7e6-efca-4f0e-a8ef-08c10f46bc99",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "408f4bdb-b3e4-4458-8652-119384b254d5",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9de16027-96ef-4772-be4c-47e028f836a7",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34e4e4e6-f79d-4aa4-8e23-ff6ad2a29132",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c303b29-ada7-4dbd-a733-30e102c84789",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "4d0172a3-de6e-4940-8d06-5c61c9ec7045",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff24e1b4-9a13-4ab8-ae3d-d192816caf9d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c0c35e3-8508-49f6-bdcf-b39555f128b5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8282d300-40fb-4f37-a741-2fbf5fab2947",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee913b01-b3f4-4bf2-8443-5046e65f6273",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "3d87d40b-3b47-41ac-8c5d-c89ac70dc5ab",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "40519189-deb2-4b4c-b4b1-f6239a692610",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "08590876-d9ea-42f7-9e6b-84b767b6e94a",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "446ca583-18a6-4061-b1e2-97df4d9118bc",
+      "comment": "",
+      "command": "type",
+      "target": "name=voucher",
+      "targets": [],
+      "value": "voucherbesarbgt"
+    }, {
+      "id": "2fca8640-7e8a-4a2a-a65c-51223deaaffe",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Apply']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b19f532-c609-43f8-9cd1-aa501aefcc24",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "212e56e7-0729-4fb2-9208-6daa439c398d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "Sorry! Requirements not match."
+    }]
+  }, {
+    "id": "3054c4f9-2a74-4cc3-8a0e-201426e59aad",
+    "name": "Apply voucher when total collection > min purchase per-collection",
+    "commands": [{
+      "id": "45654509-6cce-4309-ad4c-88b4a7c60751",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58c744f6-a2d6-47aa-9f4a-3b32d4b0c4e5",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e71570ab-1d34-401a-9c1d-9dd2d8ec971e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f57f2fb3-b16c-48da-bb79-ef550aa50006",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "3a4d3773-1ccb-4162-b006-eb5476d66888",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d1228bb-1832-4256-b2ab-ea6294283a17",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4deed739-d569-4af8-af84-163e609c3f32",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "a10b2f75-1a44-44a9-9e26-886175773676",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "50b7b0e0-8d5b-4cbb-9b10-92740411b3f9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1091a08-b4af-47c7-9c59-3d00c8d8611d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f64aec76-5ebe-46f4-86af-562b8ceca778",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68add846-d939-44b5-947a-3252ce2723eb",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f694af74-fad2-4d7f-b003-e57f1d3acaea",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "acccd4a0-2fc2-4d7b-80f7-f2f00e15d0cf",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae3d9baa-8449-4ada-9f00-e083ad3e2ad9",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9d235f07-c7ff-404f-ae4c-b1120d7a4940",
+      "comment": "",
+      "command": "type",
+      "target": "name=voucher",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "auto-collection"
+    }, {
+      "id": "1078a24a-af64-4c83-a909-9a53fd824e59",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Apply']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0c8c321-2829-4634-a4c5-59acc28b5c07",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "159c85d1-761f-405a-a945-9272d2ee0def",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Remove']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be2868d6-1e3f-4667-9217-053bb2566d62",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }, {
+      "id": "61ecff64-d03b-4b50-a7ce-e5e8aff2f7bd",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "44fb6e8e-17c1-4c81-a7ee-6f90155c41ff",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "936bff76-21e6-4761-bc79-45bf32583ef2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f228072-8493-41e6-aca8-e69acd04e58b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c19adcb-a64d-420e-982b-4463c74a26ad",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.ship-summary",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "ab1ef9a0-4160-4c57-9676-2ffd1c4eab6d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Place Order'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "49f46fa4-44fa-4409-b2b9-2b459c8ebb56",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3f37a2f-73ca-4055-a15e-bb1a6c3b53e4",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "575564c4-ad1f-4e70-a5b6-de7654df0d35",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }, {
+      "id": "cf47c948-a2be-4c2d-937b-e3dd3717ecaa",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }]
+  }, {
+    "id": "0ee1a36b-e490-47bf-8f13-756e9035b784",
+    "name": "Failed Apply voucher when total product < min purchase per-product",
+    "commands": [{
+      "id": "fd284ce7-7249-4698-aacc-f5dee7e08003",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8c2c778a-c9a2-4a33-80be-0200046b1625",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f3c05b13-9976-424f-8cc6-a0cc5881ce11",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f24f0856-3860-43c6-a978-abb6c0c853b9",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "c1cecc36-455b-4e9a-894e-4c5bf653b45a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e91c2308-ced4-4a4c-a78a-d5931548ef4e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b3e9fd2-e93b-4f3f-888f-b5cf463d9fef",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "bdaecc24-a35e-43c3-ad8b-a74ac893eeba",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf0201ac-eef6-4267-8a11-43d819f5428c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b3bdfcc6-7cab-4d54-be46-c22e222dfcfb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34c6fe9a-9e84-4dfa-93b1-55f8914cd487",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5782224b-54ac-4229-acb7-887f862c96cc",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "00911d21-9ce5-41a1-8aa7-71909f96e75e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "417a815b-41bb-4e1a-9680-0842120e5ce5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b3f9d4a8-a518-4060-b88b-a6fb85089693",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "bec49274-462e-45a8-a619-250ab6e26f35",
+      "comment": "",
+      "command": "type",
+      "target": "name=voucher",
+      "targets": [],
+      "value": "voucherbesarbgt"
+    }, {
+      "id": "4fb842ec-938f-4667-9a3f-ff2e2f43696f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Apply']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32c1430c-0dac-4f68-aad1-63d40704a68a",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "e562d96f-5cd7-4cbf-a81b-0606fe9fea89",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-error",
+      "targets": [],
+      "value": "Sorry! Requirements not match."
+    }]
+  }, {
+    "id": "639144cf-1aa4-4150-b5c9-6b959fee9a4d",
+    "name": "Apply voucher when total product = min purchase per-product",
+    "commands": [{
+      "id": "dfe57a95-809e-4ad4-9461-ee0704dc561a",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1dbe1295-a0af-4b82-a300-8fa666e23c43",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e49de06-c3ea-4458-8a56-4832cd0e83da",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23eed6f8-06fe-427b-a10b-2cc72a04805c",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "83e3b6fb-b875-42e1-91be-86509c8cbacb",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f6370dae-691b-4866-b072-10580a12c458",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5b1de06c-a055-43ae-8b34-2507506b5fad",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "e1c3e0fb-cac2-4d25-a738-bf93dccab497",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58ab1f07-b62d-42c7-a50b-c733577a0bc8",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed9c73c2-eca0-4f69-8790-5369a2bb4e22",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d00c8f47-52eb-4243-b2fb-56a68c78e2e2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b1127ce-798c-4359-8d62-063c26ad0c1b",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "47896557-ecad-47db-bcc5-ef51d0b1e2a6",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "601a5b33-b400-4aec-b49e-8c9801913c85",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cec2ca24-3a28-4d71-b1d6-1a28e9baae81",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "b1390853-d673-4b6e-868a-400150afc3fb",
+      "comment": "",
+      "command": "type",
+      "target": "name=voucher",
+      "targets": [],
+      "value": "vouchersama"
+    }, {
+      "id": "479d5945-99db-4baf-b41f-5a850c5f4a97",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Apply']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30adec90-34f0-4b2d-be79-2b7f70f34b5b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e447d3aa-905d-464a-b2cf-c87393f36f6d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Remove']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "689be3f5-57da-4dfb-8ae5-6baa7021a952",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }, {
+      "id": "09c70b2a-9285-40a5-ba21-443672e0a742",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01728350-9f60-4244-9cb9-a67669b1518d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7037192d-84f4-4039-865f-9dbb1aaea729",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b420d7be-e7ee-4464-bc96-9e5af458a578",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31c81b9b-c10c-498b-b3ba-4485d5db11ff",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.ship-summary",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "73e7bbf9-b9a7-412a-8088-80e14a5b1cd5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Place Order'])",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "89f5eb09-15c4-42f6-ae00-04d3a38e6b05",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eac95586-66da-46c0-bd80-c67c96dcb7ac",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f0c0b9cd-633f-4651-8fe7-040ad7971137",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }, {
+      "id": "78098a0e-5ac6-4a63-ae27-ea2eec821e89",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }]
+  }, {
+    "id": "f3922aef-2083-4914-8477-83f9513ee466",
+    "name": "Apply voucher when total product > min purchase per-product",
+    "commands": [{
+      "id": "73829ff9-32ff-4197-85a5-69f80b1d0cef",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b00835f4-c027-465f-8d08-81deec755905",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a4442ec-f9c2-4f4b-8eff-04490dd8f906",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "819aaec5-2e9e-4cb7-a00c-45b1e1d9e677",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.products-detail",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "aaf71c08-9ac9-4784-b203-108376dc9fbc",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "25407422-8f5e-420c-a383-4a533609f8a2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.col-17:nth-child(2) .select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyBundleCart(this);'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "56999154-905b-43c2-8b3e-b0c4faf63e31",
+      "comment": "",
+      "command": "waitForText",
+      "target": "xpath=//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "c6fb240f-c983-4dc0-95d9-a4c1555fcb0e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-cart d-none d-sm-block']//span[@class='i']",
+      "targets": [
+        ["css=.btn > .tx", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "01e434d3-0b2d-4c4d-b78c-fdbc0a855c49",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9bab7187-abea-43fa-aebb-a5734dfd64e2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Checkout']",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ce014ef-6569-4f56-8057-b07db01cba1e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d6880c8-9d6b-4254-b9cb-75cf27b094da",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cards-ship",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "da6ec7a8-404f-4978-9187-a516e20eec08",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "777cfe16-aa66-4ce2-a446-53e740f6b58e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0d67e89-5026-4d84-9cd7-589d8965ef4c",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.content-checkout.content-checkout-delivery",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "4ef8bc07-1627-4808-b9bb-e59dfa4f0e08",
+      "comment": "",
+      "command": "type",
+      "target": "name=voucher",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "auto-product"
+    }, {
+      "id": "8df87392-27ff-4d7c-a788-6cc2f0cf8e1b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Apply']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1ca12f1d-378c-4854-98ab-353281ab2196",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "533bb7cc-00c2-4d5d-b9da-c4a42df38255",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(@class,'btn-custom-bag')][normalize-space()='Remove']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "80a8e9c8-b4a4-4021-b673-4fc1678d6d9d",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }, {
+      "id": "ac120e8d-5859-461f-97f4-7fc726e08591",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "50e14123-2a01-41d8-a137-a4500b8363df",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(),'Virtual Account BCA')]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "683ab881-c568-49c5-9acc-146cbd7e7f5c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Next Step'])[1]",
+      "targets": [
+        ["name=voucher", "name"],
+        ["css=.form-voucher .form-control", "css:finder"],
+        ["xpath=//input[@name='voucher']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "88ad0ad7-a3db-4ed4-a6d3-b54dbc61c04f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "617a041c-6d0f-4a05-bda4-233fdfe09abf",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.ship-summary",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "c41b8fd0-6268-4d13-b0a2-101cbacd5ab1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Place Order'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7aa0c3e-62ff-4e95-b9ba-06f0099cad46",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06f959b0-010d-434e-b28a-fbeb92c8712a",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.completed-pay",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "acae475d-245a-4cb9-936d-cc880ec8cec1",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[text()='ORDER ID']",
+      "targets": [],
+      "value": "ORDER ID"
+    }, {
+      "id": "73f9e77e-90ed-4ef2-9732-e00184f6abc7",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[normalize-space()='Discount']",
+      "targets": [],
+      "value": "Discount"
+    }]
+  }],
+  "suites": [{
+    "id": "2ec792f9-08d9-40f4-a3b2-40dc4f9e5b9a",
+    "name": "Voucher-Code",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 60000,
+    "tests": ["d80e842d-f929-4db5-90b2-ff240b6bc1d9", "46b3619a-a675-45dd-960e-ecaed8fb50b4", "0ee1a36b-e490-47bf-8f13-756e9035b784", "69eb2088-386e-4062-8714-d22ad7bec52a", "639144cf-1aa4-4150-b5c9-6b959fee9a4d", "3054c4f9-2a74-4cc3-8a0e-201426e59aad", "f3922aef-2083-4914-8477-83f9513ee466"]
+  }],
+  "urls": ["https://www.playbysomethinc.com/", "https://www.playbysomethinc.com/admin"],
+  "plugins": []
+}

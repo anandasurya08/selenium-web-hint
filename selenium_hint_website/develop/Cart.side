@@ -1,0 +1,811 @@
+{
+  "id": "48904f72-f331-49de-986c-b8d7593616d9",
+  "version": "2.0",
+  "name": "Cart",
+  "url": "https://hintofyou.playbybeautyhaul.com/en",
+  "tests": [{
+    "id": "06b1965b-7c34-4c37-a3a3-2d3c8ba4a8b2",
+    "name": "01_Sign In account",
+    "commands": [{
+      "id": "45323fe7-7554-4b06-bcfb-d4236e0b4761",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c459bb2-f993-4ff1-96c7-754bfebf2475",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68036a41-c9b2-4898-a604-ff8725340396",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc536629-50e1-4a28-aaff-3df3d94981fb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-account']//button[@type='button']",
+      "targets": [
+        ["css=.nav-menu-account .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//li[2]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cfc2c768-3be4-480f-b9fc-d2166e571818",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [],
+      "value": "ananda.surya@beautyhaul.com"
+    }, {
+      "id": "9c87227d-9c3c-404b-a1dc-73c87d4c54cd",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.mb-3 > .form-control", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "testingBHI123"
+    }, {
+      "id": "2e5907ae-678c-4b38-8b4f-80ef489768ae",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Login'])",
+      "targets": [
+        ["css=.mb-2 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[7]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec70f2f8-c685-4a22-af98-070496ece51a",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "a6471c7b-1354-4bcf-bcfe-3bdf91a3cb59",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "344ebe22-00f8-41fa-a72c-e673797c8064",
+    "name": "Quantity in cart must be the same with quantity entered",
+    "commands": [{
+      "id": "2dc9669d-532a-4332-b89b-210a71fb1800",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30ede268-8c9a-4427-9020-87965d3b9eac",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f8fc11d-e81c-4ae2-8014-57adea5f9281",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "036a9ecd-e4d6-466b-bb75-7edba6d7a693",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "8563ec41-9ac7-451f-af82-6bb642a5690b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.sticky-button > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to Bag')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a89ad6c2-9cbe-4c1a-a9ce-70ac0615e763",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[@class='i'])[1]",
+      "targets": [
+        ["css=.d-none .i", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d23722fa-8834-41da-a5f5-17711da85e75",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//div[@class='heading']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "dcb5758d-d1fe-4748-9e92-0d2dd91a08c3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//div[@class='plus-desktop'])[1]",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f21009ca-0f5d-4703-8899-94f22ce09d29",
+      "comment": "",
+      "command": "storeValue",
+      "target": "name=quantity",
+      "targets": [],
+      "value": "quantity"
+    }, {
+      "id": "003a9ee4-75af-41b5-8fdd-53a80bd50141",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3059f90b-ad87-4d1a-878e-1842bc8de6c0",
+      "comment": "",
+      "command": "assertValue",
+      "target": "name=quantity",
+      "targets": [],
+      "value": "${quantity}"
+    }]
+  }, {
+    "id": "a847795e-3f44-4e0b-a29d-c6ce3e485937",
+    "name": "Delete product",
+    "commands": [{
+      "id": "c13bf2f8-b83b-409d-95a8-49239dadaf3d",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "24894cc4-efc7-4a9d-946d-413590544e4d",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b2066191-d9ee-428d-a4ae-293d94548c31",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dea829f7-2247-48ce-b097-e479e54eb2cc",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "0116dd52-6f56-4a76-8314-e375211b9367",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "faf04ea9-5f9c-40a3-a1ef-a87b0520e8e0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[@class='i'])[1]",
+      "targets": [
+        ["css=.sticky-button > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to Bag')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2bd2a0c1-59cc-4bf1-8d8b-e8a6ac7f4522",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//div[@class='heading']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "800d415f-9172-4d1e-80dd-99d36ba94ab5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//div[@class='remove'])[1]",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "15ced1a7-fdc4-487a-ab37-90437eeff0c8",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "21c59e8a-28a0-48c3-b484-d9502dee5061",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//div[@class='bold mb-3'])[1]",
+      "targets": [],
+      "value": "Your bag is empty"
+    }]
+  }, {
+    "id": "5ca093ae-9590-4729-bfc4-43da815a8458",
+    "name": "Reduce product quantity",
+    "commands": [{
+      "id": "84684c61-3f73-406f-9212-a17726c061b0",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "93156640-3939-4dc0-a654-253256fb5594",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f2e7b556-8eec-454c-914f-313852d342db",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "45f345d4-b79c-4bfc-a8cd-0a8a18c1be94",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "79ad50b6-aba8-4187-aa3f-6529d69c1e6d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//div[@class='plus'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d0a7904-ab51-499a-a818-67bda6f0ff26",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.select-overlay:nth-child(3)", "css:finder"],
+        ["xpath=(//div[@onclick='updateStickyCart(this);'])[3]", "xpath:attributes"],
+        ["xpath=//div[2]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "216d20c6-15d1-4317-b7c6-2efe35acc0e1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[@class='i'])[1]",
+      "targets": [
+        ["css=.sticky-button > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to Bag')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "70f55483-7acc-40f3-9b6c-b894775e442d",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//div[@class='heading']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9cc43c11-818d-4f10-923b-08267f8d98b7",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(@class,'min-desktop')]",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "db78f917-0a3a-4530-9002-e6c7dae16a7f",
+      "comment": "",
+      "command": "storeValue",
+      "target": "name=quantity",
+      "targets": [],
+      "value": "quantity"
+    }, {
+      "id": "07ea6bab-f187-484f-b317-f11ef77c2538",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "634ef2d4-3846-4d54-a8e8-2677f6db808f",
+      "comment": "",
+      "command": "assertValue",
+      "target": "name=quantity",
+      "targets": [],
+      "value": "${quantity}"
+    }]
+  }, {
+    "id": "2546a4da-df61-4c1d-a53e-285c23f8de78",
+    "name": "Quantity in pop up add engraving must be the same with quantity in cart",
+    "commands": [{
+      "id": "385431d6-56ce-4e45-a069-c83b3e5058bb",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f42e9f6f-7011-4512-8cd4-9d4e3dd739fd",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bb1324c-c6da-4d53-8482-d1b926763708",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c6958ce-bf2a-40e6-aeee-04e3a6f9bcae",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "6ef450e8-595a-4178-81bc-8728d53388b2",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f04902c7-2f49-44aa-ace9-0f5ae88aa368",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f169e21-b118-4acb-b416-fbeff2da9a40",
+      "comment": "",
+      "command": "type",
+      "target": "name=engrave",
+      "targets": [],
+      "value": "nanda test"
+    }, {
+      "id": "bcd76b1d-aaf7-4237-a8a6-4c8db190adec",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Save Customization')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f39b01ab-7ea8-4f7b-8d9c-8904f528f657",
+      "comment": "",
+      "command": "waitForText",
+      "target": "//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "b5b78704-668b-42ac-b6d8-fbed943c1441",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[@class='i'])[1]",
+      "targets": [
+        ["css=.d-none .i", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "019c466b-c4f4-4372-995f-9606ab7a737a",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//div[@class='heading']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "286a9338-0c5c-43f5-86e5-31521b24b724",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//div[@class='plus-desktop'])[1]",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4632969e-0f54-4dbf-8616-68cc28ed1222",
+      "comment": "",
+      "command": "storeValue",
+      "target": "name=quantity",
+      "targets": [],
+      "value": "quantity"
+    }, {
+      "id": "a464c114-488a-49ea-a646-044b4c847375",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3b7c79ac-898d-4940-ab6b-d4b6783b3268",
+      "comment": "",
+      "command": "assertValue",
+      "target": "name=quantity",
+      "targets": [],
+      "value": "${quantity}"
+    }]
+  }, {
+    "id": "6c580f22-7e9f-4090-b0a0-976b6fef076b",
+    "name": "Quantity in pop up edit engraving must be the same with quantity cart",
+    "commands": [{
+      "id": "1b29569e-3c9c-4bad-8fed-1414eb62bdca",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "988179fb-6ff8-43e9-9cc5-addad55fdfd7",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "59cb87b3-8682-47d9-a7c9-d6c750456929",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85dbbf56-5dfb-4b0c-b882-69ba1fab071f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "a1b9f059-80ba-4214-8dc5-421229a91ab4",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9d64507-7e02-4ffe-8148-7f86a0dbf10e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Engrave Now')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "688d914e-4275-460f-9931-05f48d8c0f58",
+      "comment": "",
+      "command": "type",
+      "target": "name=engrave",
+      "targets": [],
+      "value": "nanda test"
+    }, {
+      "id": "e8de33b9-ac1f-4ea7-9c7b-7efb7a2ccb57",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Save Customization')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e254fb82-9af5-4f05-8822-86a62c83a6ea",
+      "comment": "",
+      "command": "waitForText",
+      "target": "//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully added to cart']",
+      "targets": [],
+      "value": "Product successfully added to cart"
+    }, {
+      "id": "7f58459b-c17b-4096-9450-75cdce794337",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[@class='i'])[1]",
+      "targets": [
+        ["css=.d-none .i", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a34b0e1d-409b-4b4b-92b3-932dc19cc9aa",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Edit Engrave",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6555dd0c-7c73-473b-860f-85b15235b06c",
+      "comment": "",
+      "command": "type",
+      "target": "name=engrave",
+      "targets": [],
+      "value": "nanda"
+    }, {
+      "id": "28784ac0-e380-4257-bc11-033f1c7c4a71",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Save Customization')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9f1c9eae-9278-4f5e-b76b-1bd3d9bea4a3",
+      "comment": "",
+      "command": "waitForText",
+      "target": "//div[@class='cart-added']/div[@class='container-fluid'][text()='Product successfully engraved']",
+      "targets": [],
+      "value": "Product successfully engraved"
+    }, {
+      "id": "f2861b26-dd88-4fbd-a97e-0f0b5d97d9cb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[@class='i'])[1]",
+      "targets": [
+        ["css=.d-none .i", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc1aecf7-fc04-4629-9f06-264d97c7782a",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//div[@class='heading']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f913229b-d495-4035-b876-ed524fca8803",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//div[@class='plus-desktop'])[1]",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "669b6579-4202-4b71-a6f7-2f8812194ab7",
+      "comment": "",
+      "command": "storeValue",
+      "target": "name=quantity",
+      "targets": [],
+      "value": "quantity"
+    }, {
+      "id": "9f8bc99c-57dd-4d17-93b9-4ee367e9ec04",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f2f32cd9-9cc0-46bc-9c57-ce7e3bf7a72f",
+      "comment": "",
+      "command": "assertValue",
+      "target": "name=quantity",
+      "targets": [],
+      "value": "${quantity}"
+    }]
+  }, {
+    "id": "204d19e9-0178-405b-aed3-bed3ce85f179",
+    "name": "Direct to all collection when user shop all via cart",
+    "commands": [{
+      "id": "1b40f742-b5f8-429d-aaeb-7539d9dbcb6e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f5c33fcb-8bdc-4bd5-afdb-4975d209004f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22440454-e107-4714-b5a3-41f6acd24efd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e77a1ca0-2472-4382-bacb-10e8aef51b92",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[@class='i'])[1]",
+      "targets": [
+        ["css=.d-none .i", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f85e956b-cafc-4706-9b66-5883c380305e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[normalize-space()='Shop All']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf79ea1c-b189-4bda-bfad-2781467616c7",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//li[normalize-space()='Perfume']",
+      "targets": [],
+      "value": "Perfume"
+    }]
+  }, {
+    "id": "e198d75b-7e99-4332-b256-6c816c4112fd",
+    "name": "Add product quantity",
+    "commands": [{
+      "id": "2c298386-6cb8-4592-bf2d-1c192a359af5",
+      "comment": "",
+      "command": "run",
+      "target": "01_Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9f3b5561-db4b-4fa6-aefe-e0982bbaafc9",
+      "comment": "",
+      "command": "open",
+      "target": "/product/detail/single-sanity1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "427b8b59-642d-424e-aa9e-21418d695417",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var checkPageLoaded = function() { return document.readyState === 'complete'; }; return new Promise(function(resolve) { var interval = setInterval(function() { if (checkPageLoaded()) { clearInterval(interval); resolve(true); } }, 100); });",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "56ad2de1-278a-4483-af8b-505bda1c5f2c",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "46c1ee90-f4a6-4366-b22d-130e0f5b2485",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit'][normalize-space()='Add to Bag']",
+      "targets": [
+        ["css=.sticky-button > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to Bag')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c325daee-2f56-4ada-afad-9efc1fc8fb08",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[@class='i'])[1]",
+      "targets": [
+        ["css=.d-none .i", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c58cf86-431e-43e5-89c3-88638e2af118",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//div[@class='heading']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "acfa7afc-c6aa-4753-ad1d-6a29f1eb566e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//div[@class='plus-desktop'])[1]",
+      "targets": [
+        ["linkText=Checkout", "linkText"],
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.playbysomethinc.com/en/cart/shipping')]", "xpath:href"],
+        ["xpath=//div[17]/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "90113619-803a-4bc4-8faa-40e0bdae96c1",
+      "comment": "",
+      "command": "storeValue",
+      "target": "name=quantity",
+      "targets": [],
+      "value": "quantity"
+    }, {
+      "id": "f7bf8108-2ea1-449a-864f-18f965e7cac8",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d73316ab-f3db-4daa-8094-1eef0fe3541c",
+      "comment": "",
+      "command": "assertValue",
+      "target": "name=quantity",
+      "targets": [],
+      "value": "${quantity}"
+    }]
+  }],
+  "suites": [{
+    "id": "2ec792f9-08d9-40f4-a3b2-40dc4f9e5b9a",
+    "name": "Cart",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 60000,
+    "tests": ["5ca093ae-9590-4729-bfc4-43da815a8458", "e198d75b-7e99-4332-b256-6c816c4112fd", "a847795e-3f44-4e0b-a29d-c6ce3e485937", "204d19e9-0178-405b-aed3-bed3ce85f179", "344ebe22-00f8-41fa-a72c-e673797c8064", "2546a4da-df61-4c1d-a53e-285c23f8de78", "6c580f22-7e9f-4090-b0a0-976b6fef076b"]
+  }],
+  "urls": ["https://www.playbysomethinc.com/", "https://www.playbysomethinc.com/admin", "https://hintofyou.playbybeautyhaul.com/en"],
+  "plugins": []
+}

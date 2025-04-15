@@ -1,0 +1,242 @@
+{
+  "id": "278ce6cf-acda-478c-b4d9-0b6f1b4c10bb",
+  "version": "2.0",
+  "name": "Language",
+  "url": "https://hintofyou.playbybeautyhaul.com/en/",
+  "tests": [{
+    "id": "b5794098-3725-4aa1-a26a-293988f72416",
+    "name": "Change language to Bahasa Indonesia",
+    "commands": [{
+      "id": "2923dfe9-78e3-464c-8761-abbe13b97ffe",
+      "comment": "",
+      "command": "open",
+      "target": "/privacy-policy",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68f2ea28-787d-4f38-a3b0-d653545fa04e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7bcdc51-705f-493f-a642-8951e6819f6e",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.popup-content",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "94132b1b-b811-40ef-93fc-bfec4055e3e1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb39cebc-9b4a-4871-90b0-f75efb3feadd",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=(//strong[normalize-space()='PRIVACY POLICY'])[1]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "682e4d51-bc06-4934-abad-de665d225e5e",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//strong[normalize-space()='PRIVACY POLICY'])[1]",
+      "targets": [],
+      "value": "PRIVACY POLICY"
+    }, {
+      "id": "84000224-374f-4d6f-a9ea-e0e767180da0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[@class='underline'][normalize-space()='English'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "597dd0a9-3a69-4ea1-bf13-84988d7b74fa",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=(//div[@class='sticky-2 sticky-lang open'])[1]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "745cc0ba-09bc-4667-811f-f31a4293c6d4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[normalize-space()='Bahasa Indonesia'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9701c864-825b-416f-97a8-9506fb23d2b2",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.popup-content",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "b7e1df54-8af6-4701-bd69-bbba26856aca",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8391d36d-421f-4fd1-a155-fff92fa4de7e",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=(//span[normalize-space()='KEBIJAKAN PRIVASI'])[1]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "65c46cf7-a67d-4efd-a87a-bf774e22f71e",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//span[normalize-space()='KEBIJAKAN PRIVASI'])[1]",
+      "targets": [],
+      "value": "KEBIJAKAN PRIVASI"
+    }]
+  }, {
+    "id": "33950adc-97e3-4c6f-929e-e5a443822b57",
+    "name": "Change language to English",
+    "commands": [{
+      "id": "0a7c3879-8f6e-45ea-a40d-42143bce983a",
+      "comment": "",
+      "command": "open",
+      "target": "/privacy-policy",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a806aa7-cf39-4156-9434-144f70d9e03b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52ece2c5-5670-4d5f-8943-c1219cb69226",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.popup-content",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f922f0af-42a5-470a-8a4f-f4408e466761",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b5f0acf-0683-41c7-91c2-bea04a8d48b8",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=(//strong[normalize-space()='PRIVACY POLICY'])[1]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "8e0a639d-f9eb-428d-9b01-a77c7f77e7fb",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//strong[normalize-space()='PRIVACY POLICY'])[1]",
+      "targets": [],
+      "value": "PRIVACY POLICY"
+    }, {
+      "id": "b81329a3-22a2-4b7d-bccd-8b184e664ca9",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[@class='underline'][normalize-space()='English'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f820597b-587d-47d4-a01f-689cae393934",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=(//div[@class='sticky-2 sticky-lang open'])[1]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f250059e-771c-437b-b483-a885f66d3a8e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[normalize-space()='Bahasa Indonesia'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fdd3e45b-5d28-4e09-9592-b82c3f3f87c8",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.popup-content",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "07d676ef-9601-4a88-ad01-9f97ba0cdffd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cb44417f-c17b-43b6-b090-b6ea424a1574",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=(//span[normalize-space()='KEBIJAKAN PRIVASI'])[1]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "11f383fd-ebef-4ea2-8550-41591107aed4",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//span[normalize-space()='KEBIJAKAN PRIVASI'])[1]",
+      "targets": [],
+      "value": "KEBIJAKAN PRIVASI"
+    }, {
+      "id": "4a924c11-bde3-4456-b5e3-151e6cfa94fe",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[@class='underline'][normalize-space()='Indonesia'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "71cdb0bf-0dd2-44b8-9714-300ee21e7d96",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=(//div[@class='sticky-2 sticky-lang open'])[1]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "ceb9d7d0-ab53-4d40-b254-6e9844a03c01",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[normalize-space()='English'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6da66a45-fe42-43fc-9b40-a052c2e1b4fa",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=(//strong[normalize-space()='PRIVACY POLICY'])[1]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9f78ea01-abe5-453c-a34c-d5b677cc39b3",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//strong[normalize-space()='PRIVACY POLICY'])[1]",
+      "targets": [],
+      "value": "PRIVACY POLICY"
+    }]
+  }],
+  "suites": [{
+    "id": "2e281938-4357-403b-9f8e-022e2856810a",
+    "name": "Language",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b5794098-3725-4aa1-a26a-293988f72416", "33950adc-97e3-4c6f-929e-e5a443822b57"]
+  }],
+  "urls": [],
+  "plugins": []
+}

@@ -1,0 +1,827 @@
+{
+  "id": "ba6e6469-bf76-46e6-a5f4-d13b5d238d2d",
+  "version": "2.0",
+  "name": "Profile",
+  "url": "https://hintofyou.playbybeautyhaul.com/en",
+  "tests": [{
+    "id": "b63521c8-d613-4464-888c-ffb8aea1bc85",
+    "name": "Change password on account profile",
+    "commands": [{
+      "id": "ba9909a5-6b56-456f-a86c-6060c3d4b808",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "35e12394-9486-47b8-9095-300a15c3ccfa",
+      "comment": "",
+      "command": "open",
+      "target": "/account/profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a397ec8c-14e9-470b-9988-d77a99ca3a94",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='col-11 mt-1']//div[@class='text-lg2 bold account-title'][normalize-space()='Account Profile']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "964036ed-c70b-4acd-b7c3-f6e62ba1145e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='page-account-content accEdit-text password']//div//a[@class='glink2'][normalize-space()='Edit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "46a5d1e6-887a-4558-9b97-93c10472bd46",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='text-lg2 bold account-title'][normalize-space()='Password']",
+      "targets": [],
+      "value": "Password"
+    }, {
+      "id": "75ce5150-307e-4013-9ac1-3d54f9b72a37",
+      "comment": "",
+      "command": "type",
+      "target": "name=pass",
+      "targets": [],
+      "value": "testingBHI123"
+    }, {
+      "id": "52823f5a-8f03-4628-9623-c20ee1343655",
+      "comment": "",
+      "command": "type",
+      "target": "name=passn",
+      "targets": [],
+      "value": "testingBHI123"
+    }, {
+      "id": "9d844496-a390-40f0-9aa8-63f15a3fab75",
+      "comment": "",
+      "command": "type",
+      "target": "name=passc",
+      "targets": [],
+      "value": "testingBHI123"
+    }, {
+      "id": "c49c7735-ad89-46ab-b406-fbe913a2e610",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='col-lg-17 mb-3 mb-md-0']//button[@type='submit'][normalize-space()='Submit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "159dff75-f334-4e0f-8866-5ada10985f92",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='col-11 mt-1']//div[@class='text-lg2 bold account-title'][normalize-space()='Account Profile']",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "aec486f8-df3b-4ae5-9671-8193af844c72",
+    "name": "Sign In account",
+    "commands": [{
+      "id": "ac3b6084-5be9-4d37-a140-bf7563297845",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "90fea824-8cd8-4932-a27b-457c9d7072a0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48ad0e83-996c-4aae-9292-435c2b501ec0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce23865a-aa08-44b7-a850-8e397478705a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li[@class='nav-item nav-menu-account']//button[@type='button']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "200a654d-2937-49ae-95be-e116d4d11946",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@placeholder='Email Address']",
+      "targets": [],
+      "value": "ananda.surya@beautyhaul.com"
+    }, {
+      "id": "91147951-3468-4ee5-a14e-d8bf47985c18",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [],
+      "value": "testingBHI123"
+    }, {
+      "id": "5edc81f2-e858-4b04-9176-43adcb836a26",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Login'])",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2540e266-99ed-4673-8519-9c1a2ac12d2b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f5e279bc-da14-4f03-95f5-b2be55c3d684",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.btn-icon-login",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "8c8e9fe2-96dc-4fb8-bc29-82430d87b1db",
+    "name": "Not eligible to change password when current password id empty",
+    "commands": [{
+      "id": "118163a2-2cae-44c2-9a8c-9222cb4c8579",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ce6c17a-1006-4ceb-a746-6f5c34f0d6bd",
+      "comment": "",
+      "command": "open",
+      "target": "/account/profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "154b21d4-4c72-4812-b709-502efde2fba1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='col-11 mt-1']//div[@class='text-lg2 bold account-title'][normalize-space()='Account Profile']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad60bf88-62bd-48c1-9acd-40d6c44ad4fc",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='page-account-content accEdit-text password']//div//a[@class='glink2'][normalize-space()='Edit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a134f744-de6e-4f27-ac61-4145bb963d31",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='text-lg2 bold account-title'][normalize-space()='Password']",
+      "targets": [],
+      "value": "Password"
+    }, {
+      "id": "31597f56-11de-4f7a-9d8e-b5803cfcf11c",
+      "comment": "",
+      "command": "type",
+      "target": "name=pass",
+      "targets": [],
+      "value": "testingBHI123"
+    }, {
+      "id": "2f64c552-9b37-46e5-9a0f-1c9ef2a047d7",
+      "comment": "",
+      "command": "type",
+      "target": "name=passc",
+      "targets": [],
+      "value": "testingBHI123"
+    }, {
+      "id": "3fd125ff-9c1a-429f-b895-0e0ac14dd06a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='col-lg-17 mb-3 mb-md-0']//button[@type='submit'][normalize-space()='Submit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ef8537e-b1be-4af5-8292-a7b39f98da6c",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//p[normalize-space()='Required field.']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "91ca0fbd-7b6b-43b4-94a6-d4adda21e519",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//p[normalize-space()='Required field.']",
+      "targets": [],
+      "value": "Required field."
+    }]
+  }, {
+    "id": "7d53996f-c5a9-449a-80d9-54a98b7cfa34",
+    "name": "Not eligible to change password when new password id empty",
+    "commands": [{
+      "id": "dbb67085-c841-4978-89d9-3fb1cc81c4cb",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b11abe21-69cb-49a4-944c-d1083e2d549c",
+      "comment": "",
+      "command": "open",
+      "target": "/account/profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91f47d6b-05b2-4d89-b0d3-93226694c122",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='col-11 mt-1']//div[@class='text-lg2 bold account-title'][normalize-space()='Account Profile']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4457296c-2dc1-4b14-9182-572dd2e5c013",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='page-account-content accEdit-text password']//div//a[@class='glink2'][normalize-space()='Edit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "679c9408-fba9-4f6d-a609-f8ea2ccbd6dc",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='text-lg2 bold account-title'][normalize-space()='Password']",
+      "targets": [],
+      "value": "Password"
+    }, {
+      "id": "9f368c16-e72e-4fdb-ab84-54d66645bd0f",
+      "comment": "",
+      "command": "type",
+      "target": "name=passn",
+      "targets": [],
+      "value": "testingBHI123"
+    }, {
+      "id": "08d20263-8883-47d2-aeda-bcecfedfdf4f",
+      "comment": "",
+      "command": "type",
+      "target": "name=passc",
+      "targets": [],
+      "value": "testingBHI123"
+    }, {
+      "id": "916cd68c-76f3-499a-b3d9-2483796e52bf",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='col-lg-17 mb-3 mb-md-0']//button[@type='submit'][normalize-space()='Submit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a98c61e-0add-4c8f-be0e-315fe17205d1",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//p[normalize-space()='Required field.']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f5ebf40e-4197-492a-b96f-0e0ba287dac7",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//p[normalize-space()='Required field.']",
+      "targets": [],
+      "value": "Required field."
+    }]
+  }, {
+    "id": "9eef34e9-5263-47a4-a813-69a44f62d493",
+    "name": "Not eligible to change password when confirm new password id empty",
+    "commands": [{
+      "id": "ba725cc2-ec81-4bf2-b152-5183660e46f5",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "191e0619-eb70-4775-94d4-7b06040d6953",
+      "comment": "",
+      "command": "open",
+      "target": "/account/profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91a66cc5-f657-4580-91a3-2ca1b3f52374",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='col-11 mt-1']//div[@class='text-lg2 bold account-title'][normalize-space()='Account Profile']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0de6169d-c937-46e0-b3e8-94dd3f0314f2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='page-account-content accEdit-text password']//div//a[@class='glink2'][normalize-space()='Edit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f37f334-0f96-45be-b210-e4d7eaf4351d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='text-lg2 bold account-title'][normalize-space()='Password']",
+      "targets": [],
+      "value": "Password"
+    }, {
+      "id": "5aadb6e7-18dc-4ea6-8b62-9d73f8aa22e5",
+      "comment": "",
+      "command": "type",
+      "target": "name=pass",
+      "targets": [],
+      "value": "testingBHI123"
+    }, {
+      "id": "f7d9152c-3ad6-4941-be14-d7a72ac75b1f",
+      "comment": "",
+      "command": "type",
+      "target": "name=passn",
+      "targets": [],
+      "value": "testingBHI123"
+    }, {
+      "id": "bf4b2cf5-a23b-4d8e-adeb-4dc27c7f713c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='col-lg-17 mb-3 mb-md-0']//button[@type='submit'][normalize-space()='Submit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8df8dbe3-5813-48bc-a41b-fa4be8e9a9e4",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//p[normalize-space()='Required field.']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "08a96a5b-c614-48f5-bd40-fc0ea5395cd8",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//p[normalize-space()='Required field.']",
+      "targets": [],
+      "value": "Required field."
+    }]
+  }, {
+    "id": "b8c8abe9-6316-4e3f-91eb-35212cc052c8",
+    "name": "Not eligible to change password when current password is wrong",
+    "commands": [{
+      "id": "50409309-c932-465b-a8cd-329918d45626",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97d48867-5487-4af6-8531-b083783df5da",
+      "comment": "",
+      "command": "open",
+      "target": "/account/profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb69b675-fb47-4d41-a65e-3f3987cedd01",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='col-11 mt-1']//div[@class='text-lg2 bold account-title'][normalize-space()='Account Profile']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e34d91b-949b-412c-a1b2-7fc22a76605c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='page-account-content accEdit-text password']//div//a[@class='glink2'][normalize-space()='Edit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e38a97d5-aa6f-484c-92d2-d6bf3f541ac2",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='text-lg2 bold account-title'][normalize-space()='Password']",
+      "targets": [],
+      "value": "Password"
+    }, {
+      "id": "7c33560b-e3f4-4046-b57d-fa42b4a1b646",
+      "comment": "",
+      "command": "type",
+      "target": "name=pass",
+      "targets": [],
+      "value": "testingBHI12"
+    }, {
+      "id": "15962997-2743-4f00-a583-da0b9a6ce6f5",
+      "comment": "",
+      "command": "type",
+      "target": "name=passn",
+      "targets": [],
+      "value": "testingBHI123"
+    }, {
+      "id": "f5a510c9-c117-4b88-b397-c300099d3109",
+      "comment": "",
+      "command": "type",
+      "target": "name=passc",
+      "targets": [],
+      "value": "testingBHI123"
+    }, {
+      "id": "75e4c3ef-8c16-4738-b81a-572747a0790d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='col-lg-17 mb-3 mb-md-0']//button[@type='submit'][normalize-space()='Submit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5b05c0f1-0348-4dc9-97ae-c5796026eae7",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//p[normalize-space()='Invalid current password.']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "84b5d968-1e6b-4151-aef1-177bfd60609d",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//p[normalize-space()='Invalid current password.']",
+      "targets": [],
+      "value": "Invalid current password."
+    }]
+  }, {
+    "id": "54130b60-b6a3-49b8-ad14-88ecae1e46e4",
+    "name": "Not eligible to change password when new & confirm password just contain alphabets",
+    "commands": [{
+      "id": "b4d6635a-6ec3-41e3-9714-6214ba7ab52e",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3279c8c4-f8b0-48e6-a3cb-8135fc2c79f7",
+      "comment": "",
+      "command": "open",
+      "target": "/account/profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2617438a-80ae-4c28-a53a-48f54c721ee7",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='col-11 mt-1']//div[@class='text-lg2 bold account-title'][normalize-space()='Account Profile']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "279f2f29-9865-42f9-bc00-53b19ea76d18",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='page-account-content accEdit-text password']//div//a[@class='glink2'][normalize-space()='Edit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53b6f9b4-8545-47ec-91d7-5f9554dd8d15",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='text-lg2 bold account-title'][normalize-space()='Password']",
+      "targets": [],
+      "value": "Password"
+    }, {
+      "id": "d3711166-bb17-48bc-8a61-9562e6d6f280",
+      "comment": "",
+      "command": "type",
+      "target": "name=pass",
+      "targets": [],
+      "value": "testingBHI123"
+    }, {
+      "id": "c80420c2-2e07-45ac-8429-512f7a373d3e",
+      "comment": "",
+      "command": "type",
+      "target": "name=passn",
+      "targets": [],
+      "value": "testingBHI"
+    }, {
+      "id": "4b65ce41-eb71-4fd7-970e-5445ae5f0a2a",
+      "comment": "",
+      "command": "type",
+      "target": "name=passc",
+      "targets": [],
+      "value": "testingBHI"
+    }, {
+      "id": "525916e0-6cad-4461-8c26-e66807069096",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='col-lg-17 mb-3 mb-md-0']//button[@type='submit'][normalize-space()='Submit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "49674ef1-8124-48d0-9845-8bd68aa93a45",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=(//p[contains(text(),'Password field must have at least 1 character and 1 number.')])[1]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "45ecea71-5b49-4010-8fc9-0b47b1d87e77",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=(//p[contains(text(),'Password field must have at least 1 character and 1 number.')])[2]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "ce37bf9c-467f-4a87-8f93-30ca35959051",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//p[contains(text(),'Password field must have at least 1 character and 1 number.')])[1]",
+      "targets": [],
+      "value": "Password field must have at least 1 character and 1 number."
+    }, {
+      "id": "8126eaed-d0f6-4f76-a645-722a1cd0a344",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//p[contains(text(),'Password field must have at least 1 character and 1 number.')])[2]",
+      "targets": [],
+      "value": "Password field must have at least 1 character and 1 number."
+    }]
+  }, {
+    "id": "57e649f1-58c1-4550-8586-1be7c0d5fc4e",
+    "name": "Not eligible to change password when new & confirm password just contain numbers",
+    "commands": [{
+      "id": "6170f197-bb54-44ea-a4c2-d1ddaad8160a",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9707d52-4322-47e8-92a0-fec46c1ece7c",
+      "comment": "",
+      "command": "open",
+      "target": "/account/profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b46f1a1b-3dbd-4ce4-9200-b9c197e1cdcb",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='col-11 mt-1']//div[@class='text-lg2 bold account-title'][normalize-space()='Account Profile']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a3227de-dd68-4169-9690-0f74c307af48",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='page-account-content accEdit-text password']//div//a[@class='glink2'][normalize-space()='Edit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1eb10174-82e8-4a46-a685-a14953544f83",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='text-lg2 bold account-title'][normalize-space()='Password']",
+      "targets": [],
+      "value": "Password"
+    }, {
+      "id": "af7e00ce-6924-45e6-aae9-fa73d9e6d9e9",
+      "comment": "",
+      "command": "type",
+      "target": "name=pass",
+      "targets": [],
+      "value": "testingBHI123"
+    }, {
+      "id": "074678d6-832a-4870-be1e-ffcc0802bf8d",
+      "comment": "",
+      "command": "type",
+      "target": "name=passn",
+      "targets": [],
+      "value": "123456"
+    }, {
+      "id": "5fa7b4ed-ecf3-425a-b9e3-0c915d100e8b",
+      "comment": "",
+      "command": "type",
+      "target": "name=passc",
+      "targets": [],
+      "value": "123456"
+    }, {
+      "id": "3306fbc5-0654-4ebd-8f2e-bf638e05dfda",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='col-lg-17 mb-3 mb-md-0']//button[@type='submit'][normalize-space()='Submit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a6de824-f867-4c7a-9449-da55e0f72384",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=(//p[contains(text(),'Password field must have at least 1 character and 1 number.')])[1]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "5d15e7d7-1e0f-4a0b-b8b1-3c282f6d1c3c",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=(//p[contains(text(),'Password field must have at least 1 character and 1 number.')])[2]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "c1168ae8-16e7-4a80-8135-66524eaeef7e",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//p[contains(text(),'Password field must have at least 1 character and 1 number.')])[1]",
+      "targets": [],
+      "value": "Password field must have at least 1 character and 1 number."
+    }, {
+      "id": "91e73362-9846-48b4-a6cc-20a1466dccde",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//p[contains(text(),'Password field must have at least 1 character and 1 number.')])[2]",
+      "targets": [],
+      "value": "Password field must have at least 1 character and 1 number."
+    }]
+  }, {
+    "id": "bddd6c15-204e-4326-ac15-3b984a76faec",
+    "name": "Not eligible to change password when new & confirm password just contain special characters",
+    "commands": [{
+      "id": "3894d07b-b477-4e72-9390-6b40619b1701",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a5bd1f2-6ae1-4fe2-b8fe-c5a16e9ebba2",
+      "comment": "",
+      "command": "open",
+      "target": "/account/profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7311cd71-0fd8-4151-8935-30fb501e311f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='col-11 mt-1']//div[@class='text-lg2 bold account-title'][normalize-space()='Account Profile']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b0b84bc-ad30-48bb-bf17-d6c95de51325",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='page-account-content accEdit-text password']//div//a[@class='glink2'][normalize-space()='Edit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ec6dea8-83b6-47d3-ae36-e9dc2c68543f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='text-lg2 bold account-title'][normalize-space()='Password']",
+      "targets": [],
+      "value": "Password"
+    }, {
+      "id": "aade15a9-7d55-459c-a36e-ee3558172dab",
+      "comment": "",
+      "command": "type",
+      "target": "name=pass",
+      "targets": [],
+      "value": "testingBHI123"
+    }, {
+      "id": "5e2dc914-9188-4355-919d-46d140231710",
+      "comment": "",
+      "command": "type",
+      "target": "name=passn",
+      "targets": [],
+      "value": "!@#$%&*"
+    }, {
+      "id": "40b9d438-5b80-4f9e-9732-9e7e8b5f68e0",
+      "comment": "",
+      "command": "type",
+      "target": "name=passc",
+      "targets": [],
+      "value": "!@#$%&*"
+    }, {
+      "id": "d2b3beff-3471-466d-bf6c-69b6f0ff4852",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='col-lg-17 mb-3 mb-md-0']//button[@type='submit'][normalize-space()='Submit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6412013-61ed-4920-bc01-695f4a1629f0",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=(//p[contains(text(),'Password field must have at least 1 character and 1 number.')])[1]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "e7fdf4dc-2c42-4e80-ae6a-6b6aa9f65e5a",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=(//p[contains(text(),'Password field must have at least 1 character and 1 number.')])[2]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "b9145156-7233-4ed5-8d76-6b7405f68d3b",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//p[contains(text(),'Password field must have at least 1 character and 1 number.')])[1]",
+      "targets": [],
+      "value": "Password field must have at least 1 character and 1 number."
+    }, {
+      "id": "9efe09bc-6abb-483d-b392-766fa9ebc203",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//p[contains(text(),'Password field must have at least 1 character and 1 number.')])[2]",
+      "targets": [],
+      "value": "Password field must have at least 1 character and 1 number."
+    }]
+  }, {
+    "id": "73e654d9-d6ec-4b7a-902d-3b40ff4c901c",
+    "name": "Not eligible to change password when new & confirm password doesn't match",
+    "commands": [{
+      "id": "880ed0f6-fded-4b15-953f-c95bef7f65cc",
+      "comment": "",
+      "command": "run",
+      "target": "Sign In account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "29838090-1c41-418c-ba16-3c673715b033",
+      "comment": "",
+      "command": "open",
+      "target": "/account/profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d65d8f37-326d-4e99-9722-5a4dc29e22db",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='col-11 mt-1']//div[@class='text-lg2 bold account-title'][normalize-space()='Account Profile']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5049ff82-3e4d-42c5-bfa8-f0343a74dd68",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='page-account-content accEdit-text password']//div//a[@class='glink2'][normalize-space()='Edit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76abf32c-609e-4cf7-8777-f5ba13088e2b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='text-lg2 bold account-title'][normalize-space()='Password']",
+      "targets": [],
+      "value": "Password"
+    }, {
+      "id": "0631275b-1cab-47d2-8126-6f22b64664ef",
+      "comment": "",
+      "command": "type",
+      "target": "name=pass",
+      "targets": [],
+      "value": "testingBHI123"
+    }, {
+      "id": "6991ae85-0ef3-4f96-9a3c-3b04208eb96c",
+      "comment": "",
+      "command": "type",
+      "target": "name=passn",
+      "targets": [],
+      "value": "testingBHI24"
+    }, {
+      "id": "1f4b8895-01df-49d3-91eb-d2ec43b79d2b",
+      "comment": "",
+      "command": "type",
+      "target": "name=passc",
+      "targets": [],
+      "value": "testingBHI23"
+    }, {
+      "id": "a719e33e-767f-4059-b40a-f1db647fafc9",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='col-lg-17 mb-3 mb-md-0']//button[@type='submit'][normalize-space()='Submit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3abf5d57-cdd6-43c1-a8f5-4da427d7f892",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//p[normalize-space()='The Confirm new password field does not match the New password field.']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "bb1194ac-6821-4dbb-b8d3-81b6722e0023",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//p[normalize-space()='The Confirm new password field does not match the New password field.']",
+      "targets": [],
+      "value": "The Confirm new password field does not match the New password field."
+    }]
+  }],
+  "suites": [{
+    "id": "ca7dd43c-178d-49f7-bd6f-94821821ace3",
+    "name": "Profile",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b63521c8-d613-4464-888c-ffb8aea1bc85", "8c8e9fe2-96dc-4fb8-bc29-82430d87b1db", "b8c8abe9-6316-4e3f-91eb-35212cc052c8", "73e654d9-d6ec-4b7a-902d-3b40ff4c901c", "54130b60-b6a3-49b8-ad14-88ecae1e46e4", "57e649f1-58c1-4550-8586-1be7c0d5fc4e", "bddd6c15-204e-4326-ac15-3b984a76faec", "7d53996f-c5a9-449a-80d9-54a98b7cfa34", "9eef34e9-5263-47a4-a813-69a44f62d493"]
+  }],
+  "urls": [],
+  "plugins": []
+}

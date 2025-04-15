@@ -1,0 +1,228 @@
+{
+  "id": "341eb68f-bd6a-41f9-8dbf-3949f115aa05",
+  "version": "2.0",
+  "name": "Contact-Us",
+  "url": "https://hintofyou.playbybeautyhaul.com/en",
+  "tests": [{
+    "id": "aa673e5b-b7d5-407d-b500-b7ad45d72bb6",
+    "name": "Submit question when all fields empty",
+    "commands": [{
+      "id": "7cee94a9-23f3-4a79-a23b-c3a6a4ea589b",
+      "comment": "",
+      "command": "open",
+      "target": "/contact",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed76819b-66ef-4428-93a4-f847e53aa838",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5725809-f9a8-4812-95e6-28484bd91202",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.popup-content",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "02ef59d9-8cbd-4f0d-bd3d-9d431c92633a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4267cff5-3abf-4e31-9b76-2a9013fb615e",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.email",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "4a207d7f-e165-4337-a7dc-7aebc8f86ec3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Submit'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09bf25d1-574c-4ee0-a2aa-4bc808e68d41",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=(//p[contains(text(),'Required field.')])[1]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "45b34695-78ae-421f-b411-16b14b60784d",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//p[contains(text(),'Required field.')])[1]",
+      "targets": [],
+      "value": "Required field."
+    }, {
+      "id": "e61f5ae9-3841-426e-a83d-8a8fd1461081",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//p[contains(text(),'Required field.')])[2]",
+      "targets": [],
+      "value": "Required field."
+    }, {
+      "id": "829840ee-7f10-4d1b-9b67-be4414ff4e77",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//p[contains(text(),'Required field.')])[3]",
+      "targets": [],
+      "value": "Required field."
+    }, {
+      "id": "fdc956d2-da6a-4bbf-8d88-cd1930a84e85",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//p[contains(text(),'Required field.')])[4]",
+      "targets": [],
+      "value": "Required field."
+    }, {
+      "id": "a153c62c-7555-45ff-a4f7-5fc324298cea",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//p[contains(text(),'Required field.')])[5]",
+      "targets": [],
+      "value": "Required field."
+    }]
+  }, {
+    "id": "1063a24f-b389-4694-96fa-6dc20f5246d3",
+    "name": "Successful submit question",
+    "commands": [{
+      "id": "ec0a608c-90a2-4e1a-acd5-b90202196092",
+      "comment": "",
+      "command": "open",
+      "target": "/contact",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "988b546c-70fd-43ff-90ae-94ca636a5068",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "323ef882-f257-40b4-9318-363a101b2d6c",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.popup-content",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "ecc38c4a-a98f-4f47-a741-27233f5c8b51",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f1b2d13c-641e-4fb8-ac00-e804ba8966d9",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.email",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "edd02b7c-6869-4fdc-9c0b-dbf0f688a5d6",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [],
+      "value": "shabrina"
+    }, {
+      "id": "9990099d-c292-492b-b0c5-262f3fe88148",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [],
+      "value": "shabrina@beautyhaul.com"
+    }, {
+      "id": "5114d4ab-63c6-4d85-83eb-adcec9c3624c",
+      "comment": "",
+      "command": "type",
+      "target": "name=phone",
+      "targets": [],
+      "value": "087765433456"
+    }, {
+      "id": "255c3767-7adb-4cf9-9726-ea9b47751ba4",
+      "comment": "",
+      "command": "type",
+      "target": "name=subject",
+      "targets": [],
+      "value": "Test QA"
+    }, {
+      "id": "1fe768e2-3ff8-454c-b9b5-8c00ec1fc9b3",
+      "comment": "",
+      "command": "type",
+      "target": "name=message",
+      "targets": [],
+      "value": "Ini test dari tim tech"
+    }, {
+      "id": "d7428411-a3cf-499d-8aac-ef9b628e2f93",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[normalize-space()='Submit'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d07937cd-c5f6-4e4f-9dfe-50b6f67ba4f6",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=(//input[@placeholder='Name'])[1]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "809dcc9b-0d6d-4673-9b0c-f7ae8575f09f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//input[@placeholder='Name'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff0cdcc2-66e2-4a1b-a03e-df6fb9209fc2",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//input[@placeholder='Email address'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e18a2d3-ffa0-4a1f-9f17-97b480420265",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//input[@placeholder='Phone number'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bfbf11db-013a-4cd4-95eb-40ea1ec5b9e2",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//input[@placeholder='Subject'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d01c0d5-fd23-452f-8fd3-56cfd6f4e98e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//textarea[@placeholder='Message'])[1]",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f8931f43-7d74-414f-9301-3c57ffa3c492",
+    "name": "Contact-Us",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["aa673e5b-b7d5-407d-b500-b7ad45d72bb6", "1063a24f-b389-4694-96fa-6dc20f5246d3"]
+  }],
+  "urls": [],
+  "plugins": []
+}
